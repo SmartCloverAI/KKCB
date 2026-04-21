@@ -13,6 +13,26 @@ npm run typecheck
 npm run dev
 ```
 
+## Production
+
+For a standard production build and local production run:
+
+```bash
+npm install
+npm run media:check
+npm run build
+npm run start
+```
+
+If you have added or re-curated source images before the build, regenerate processed media first:
+
+```bash
+npm run media:check
+npm run media:process
+npm run build
+npm run start
+```
+
 ## Content structure
 
 - global bilingual site copy: `src/content/site.ts`
