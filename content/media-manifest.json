@@ -1,0 +1,152 @@
+[
+  {
+    "id": "hero-bedside-punch",
+    "originalFilename": "IMG_20170106_161942.jpg",
+    "source": "assets/originals/program/children-find-courage-at-bedside-original.jpg",
+    "src": "/media/children-find-courage-at-bedside.jpg",
+    "category": "program",
+    "alt": {
+      "ro": "Un copil loveste o paleta de antrenament tinuta de un instructor imbracat pentru sala de operatie, chiar la patul de spital.",
+      "en": "A child strikes a training pad held by an instructor dressed for the operating room right at the hospital bedside."
+    },
+    "caption": {
+      "ro": "Exercitiile de Budo muta atentia dinspre frica spre actiune.",
+      "en": "Budo exercises shift attention away from fear and toward action."
+    }
+  },
+  {
+    "id": "origami-hope",
+    "originalFilename": "IMG_20170208_154145.jpg",
+    "source": "assets/originals/program/child-with-origami-crane-original.jpg",
+    "src": "/media/child-with-origami-crane.jpg",
+    "category": "story",
+    "alt": {
+      "ro": "Prim-plan cu un copil in spital care priveste o pasare origami verde asezata pe masa.",
+      "en": "Close-up of a child in hospital looking at a green origami bird resting on a tray."
+    },
+    "caption": {
+      "ro": "Momentele mici de creativitate si respiratie dau spatiu sperantei.",
+      "en": "Small moments of creativity and breathing make room for hope."
+    }
+  },
+  {
+    "id": "thumbs-up-bedside",
+    "originalFilename": "IMG_20170308_161553_1.jpg",
+    "source": "assets/originals/program/thumbs-up-bedside-session-original.jpg",
+    "src": "/media/thumbs-up-bedside-session.jpg",
+    "category": "program",
+    "alt": {
+      "ro": "O adolescenta si un instructor in echipament medical arata semnul de aprobare intr-un salon de spital.",
+      "en": "A teenage girl and an instructor in medical gear give a thumbs up in a hospital room."
+    },
+    "caption": {
+      "ro": "Programul construieste incredere chiar in mijlocul tratamentului.",
+      "en": "The program builds confidence in the middle of treatment."
+    }
+  },
+  {
+    "id": "strength-pose",
+    "originalFilename": "IMG_20190717_154921.jpg",
+    "source": "assets/originals/program/strength-pose-bedside-original.jpg",
+    "src": "/media/strength-pose-bedside.jpg",
+    "category": "program",
+    "alt": {
+      "ro": "Un instructor si o fetita aflata in spital stau unul langa altul pe pat si ridica bratul intr-o pozitie de forta, vazuti din spate.",
+      "en": "An instructor and a young girl in hospital sit side by side on the bed and raise an arm in a strength pose, seen from behind."
+    },
+    "caption": {
+      "ro": "Postura, respiratia si vocea devin instrumente de control.",
+      "en": "Posture, breathing, and voice become tools for control."
+    }
+  },
+  {
+    "id": "guided-walk",
+    "originalFilename": "IMG_20180806_155122.jpg",
+    "source": "assets/originals/program/guided-walk-bedside-original.jpg",
+    "src": "/media/guided-walk-bedside.jpg",
+    "category": "story",
+    "alt": {
+      "ro": "Un instructor pune bratul in jurul unui copil si il insoteste prin salonul de spital.",
+      "en": "An instructor places an arm around a child and walks with them through the hospital room."
+    },
+    "caption": {
+      "ro": "Relatia de incredere este parte din metoda, nu doar cadrul ei.",
+      "en": "Trust is part of the method, not just the setting around it."
+    }
+  },
+  {
+    "id": "team-with-student",
+    "originalFilename": "IMG_20170911_160830.jpg",
+    "source": "assets/originals/program/team-with-student-original.jpg",
+    "src": "/media/team-with-student.jpg",
+    "category": "community",
+    "alt": {
+      "ro": "Mai multi voluntari in echipament Budo stau in jurul unui adolescent pe patul de spital.",
+      "en": "Several Budo volunteers stand around a teenager sitting on a hospital bed."
+    },
+    "caption": {
+      "ro": "Comunitatea face diferenta dintre o vizita si un program sustenabil.",
+      "en": "Community makes the difference between a visit and a sustainable program."
+    }
+  },
+  {
+    "id": "historic-napoli-2013",
+    "originalFilename": "Primul grup KKC Napoli 2013.jpg",
+    "source": "assets/originals/archive/historic-napoli-2013-original.jpg",
+    "src": "/media/historic-napoli-2013.jpg",
+    "category": "archive",
+    "alt": {
+      "ro": "Fotografie de grup din Napoli, din primii ani ai programului Kids Kicking Cancer.",
+      "en": "Group photograph from Naples in the early years of the Kids Kicking Cancer program."
+    },
+    "caption": {
+      "ro": "Reteaua internationala a crescut prin comunitati locale care au dus metoda mai departe.",
+      "en": "The international network grew through local communities that carried the method forward."
+    }
+  },
+  {
+    "id": "historic-rome-2012",
+    "originalFilename": "Grupul de cursanti Roma 2012.jpg",
+    "source": "assets/originals/archive/historic-rome-2012-original.jpg",
+    "src": "/media/historic-rome-2012.jpg",
+    "category": "archive",
+    "alt": {
+      "ro": "Grup de practicanti si sustinatori fotografiati intr-o sala mare din Roma.",
+      "en": "A group of practitioners and supporters photographed inside a large room in Rome."
+    },
+    "caption": {
+      "ro": "Istoria capitolului romanesc poate fi prezentata ca parte a unei mosteniri europene mai largi.",
+      "en": "The Romanian chapter can be framed as part of a broader European legacy."
+    }
+  },
+  {
+    "id": "founder-raby",
+    "originalFilename": "RabyG fondatorul KKC SUA.jpg",
+    "source": "assets/originals/archive/founder-raby-original.jpg",
+    "src": "/media/founder-raby.jpg",
+    "category": "archive",
+    "alt": {
+      "ro": "Fotografie documentara cu fondatorul KKC alaturi de un reprezentant al programului.",
+      "en": "Documentary photograph of the KKC founder alongside a program representative."
+    },
+    "caption": {
+      "ro": "Legatura cu miscarea internationala aduce legitimitate si continuitate.",
+      "en": "The link to the international movement brings legitimacy and continuity."
+    }
+  },
+  {
+    "id": "italian-press",
+    "originalFilename": "Buone Notizie - Corriere della Sera-1A.jpg",
+    "source": "assets/originals/archive/italian-press-coverage-original.jpg",
+    "src": "/media/italian-press-coverage.jpg",
+    "category": "archive",
+    "alt": {
+      "ro": "Colaj cu o aparitie in presa italiana despre Kids Kicking Cancer.",
+      "en": "Collage showing Italian press coverage about Kids Kicking Cancer."
+    },
+    "caption": {
+      "ro": "Vizibilitatea publica este parte din misiune, nu doar un rezultat secundar.",
+      "en": "Public visibility is part of the mission, not just a side effect."
+    }
+  }
+]
