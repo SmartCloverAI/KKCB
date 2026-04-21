@@ -22,7 +22,7 @@ export default async function AboutPage({
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        <MediaCard id="historic-napoli-2013" locale={locale} />
+        <MediaCard id="founder-raby" locale={locale} />
       </section>
       <section className="section">
         <div className="timeline">

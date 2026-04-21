@@ -46,6 +46,7 @@ npm run start
 - global bilingual site copy: `src/content/site.ts`
 - bilingual blog posts: `content/blog/ro` and `content/blog/en`
 - curated original images: `assets/originals`
+- quarantined non-approved originals: `_unapproved` (gitignored)
 - temporary intake folder that must stay empty in commits: `_raw`
 - processed site images: `public/media`
 

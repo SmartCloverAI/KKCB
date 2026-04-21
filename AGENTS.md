@@ -23,6 +23,7 @@ This repository hosts the public website for `Kids Kicking Cancer with Budo Roma
 - site copy: [src/content/site.ts](/home/andrei/work/SmartClover/KKCB/src/content/site.ts)
 - media manifest: [content/media-manifest.json](/home/andrei/work/SmartClover/KKCB/content/media-manifest.json)
 - curated original images: `assets/originals/`
+- quarantined non-approved originals: `_unapproved/`
 - temporary intake folder: [\_raw](/home/andrei/work/SmartClover/KKCB/_raw)
 - processed website images: `public/media/`
 - blog loader and helpers: [src/lib/content.ts](/home/andrei/work/SmartClover/KKCB/src/lib/content.ts)
@@ -43,7 +44,7 @@ This repository hosts the public website for `Kids Kicking Cancer with Budo Roma
 1. Add or edit bilingual copy in `src/content/site.ts`.
 2. Add blog posts as Markdown files under `content/blog/ro` and `content/blog/en`.
 3. Import new unreviewed files into `_raw/`.
-4. Curate and move approved originals into `assets/originals/*`; do not commit source files in `_raw/`.
+4. Curate and move approved originals into `assets/originals/*`; move rejected or confidential originals into `_unapproved/*`; do not commit source files in `_raw/`.
 5. Add or update entries in `content/media-manifest.json`.
 6. Run `npm run media:process`.
 7. Run `npm test` and `npm run typecheck` before handing off.
@@ -56,3 +57,4 @@ This repository hosts the public website for `Kids Kicking Cancer with Budo Roma
 - Treat the research page as an agenda and partnership invitation, not as proof beyond available evidence.
 - `_raw/` must stay empty in the committed repo state except for `.gitkeep`.
 - Every repository change set must include a version bump in `package.json`, with `package-lock.json` kept in sync.
+- Only originals marked approved in `content/media-review.json` may appear in `content/media-manifest.json` or `public/media/`.

@@ -2,10 +2,21 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: process.cwd(),
+  async headers() {
+    return [
+      {
+        source: "/media/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=14400, stale-while-revalidate=86400"
+          }
+        ]
+      }
+    ];
+  },
   images: {
-    deviceSizes: [640, 828, 1080, 1200, 1600, 1920],
-    formats: ["image/webp"],
-    minimumCacheTTL: 14400
+    unoptimized: true
   }
 };
 

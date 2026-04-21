@@ -3,7 +3,7 @@ title: "Fundraising cu sens: cum strangem bani fara sa pierdem miza umana"
 excerpt: Donatiile trebuie legate clar de rezultate, procese si povesti credibile, nu doar de apeluri emotionale.
 publishedAt: 2026-04-12
 author: Echipa KKCB Romania
-coverId: origami-hope
+coverId: balloon-prep-bedside
 ---
 
 Fundraising-ul bun nu inseamna presiune emotionala permanenta. Inseamna sa explici limpede ce faci, de ce conteaza si ce anume devine posibil atunci cand comunitatea contribuie.

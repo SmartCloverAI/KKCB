@@ -1,0 +1,147 @@
+[
+  {
+    "source": "assets/originals/archive/founder-raby-original.jpg",
+    "status": "approved",
+    "reason": "Adults only; no patient confidentiality issue identified."
+  },
+  {
+    "source": "assets/originals/archive/historic-napoli-2013-original.jpg",
+    "status": "unapproved",
+    "reason": "Includes an uncovered patient face in a hospital group shot."
+  },
+  {
+    "source": "assets/originals/archive/historic-rome-2012-original.jpg",
+    "status": "approved",
+    "reason": "Group training image without bedside patient exposure."
+  },
+  {
+    "source": "assets/originals/archive/italian-press-coverage-original.jpg",
+    "status": "approved",
+    "reason": "Press clipping; no direct patient exposure."
+  },
+  {
+    "source": "assets/originals/archive/kkc-poster-mark-original.jpg",
+    "status": "unapproved",
+    "reason": "Promotional children imagery with uncovered faces and unclear reuse rights."
+  },
+  {
+    "source": "assets/originals/program/balloon-pad-strike-original.jpg",
+    "status": "approved",
+    "reason": "Patient mask is clearly visible."
+  },
+  {
+    "source": "assets/originals/program/balloon-prep-bedside-original.jpg",
+    "status": "approved",
+    "reason": "Patient mask is clearly visible."
+  },
+  {
+    "source": "assets/originals/program/bedside-punch-training-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient masking is not clearly visible."
+  },
+  {
+    "source": "assets/originals/program/bedside-yellow-belt-portrait-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient face is visible without a mask."
+  },
+  {
+    "source": "assets/originals/program/child-and-mentor-embrace-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient face is visible without a mask."
+  },
+  {
+    "source": "assets/originals/program/child-and-mentor-prayer-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient face is visible without a mask."
+  },
+  {
+    "source": "assets/originals/program/child-white-belt-bedside-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient masking is not clearly visible."
+  },
+  {
+    "source": "assets/originals/program/child-with-origami-crane-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient face is visible without a mask."
+  },
+  {
+    "source": "assets/originals/program/children-find-courage-at-bedside-original.jpg",
+    "status": "approved",
+    "reason": "Patient mask is clearly visible."
+  },
+  {
+    "source": "assets/originals/program/confident-punch-red-shirt-original.jpg",
+    "status": "approved",
+    "reason": "Patient mask is clearly visible."
+  },
+  {
+    "source": "assets/originals/program/guided-walk-bedside-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient masking is not clearly visible."
+  },
+  {
+    "source": "assets/originals/program/hospital-pad-training-original.jpg",
+    "status": "approved",
+    "reason": "Patient mask is clearly visible."
+  },
+  {
+    "source": "assets/originals/program/peace-sign-dojo-jacket-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient masking is not clearly visible."
+  },
+  {
+    "source": "assets/originals/program/portrait-with-student-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient face is visible without a mask."
+  },
+  {
+    "source": "assets/originals/program/prayer-hands-bedside-original.jpg",
+    "status": "approved",
+    "reason": "Patient mask is clearly visible."
+  },
+  {
+    "source": "assets/originals/program/seated-pad-drill-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient masking is not clearly visible."
+  },
+  {
+    "source": "assets/originals/program/strength-pose-bedside-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient masking is not clearly visible."
+  },
+  {
+    "source": "assets/originals/program/supportive-embrace-window-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient masking is not clearly visible."
+  },
+  {
+    "source": "assets/originals/program/team-portrait-hospital-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient masking is not clearly visible."
+  },
+  {
+    "source": "assets/originals/program/team-with-student-original.jpg",
+    "status": "approved",
+    "reason": "Patient mask is clearly visible."
+  },
+  {
+    "source": "assets/originals/program/teen-focus-drill-wide-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient face is visible without a mask."
+  },
+  {
+    "source": "assets/originals/program/teen-guided-breathwork-portrait-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient face is visible without a mask."
+  },
+  {
+    "source": "assets/originals/program/thumbs-up-bedside-session-original.jpg",
+    "status": "approved",
+    "reason": "Patient mask is clearly visible."
+  },
+  {
+    "source": "assets/originals/program/yellow-belt-encouragement-original.jpg",
+    "status": "unapproved",
+    "reason": "Patient face is visible without a mask."
+  }
+]

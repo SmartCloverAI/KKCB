@@ -25,7 +25,7 @@ export default async function MethodPage({
           ))}
           <blockquote>{page.quote}</blockquote>
         </div>
-        <MediaCard id="guided-walk" locale={locale} />
+        <MediaCard id="balloon-pad-strike" locale={locale} />
       </section>
     </main>
   );

@@ -10,10 +10,10 @@ const outputRoot = path.join(root, "public");
 const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
 
 const widthsByCategory = {
-  archive: 1600,
-  community: 1800,
-  program: 2200,
-  story: 2000
+  archive: 1400,
+  community: 1600,
+  program: 1800,
+  story: 1600
 };
 
 for (const entry of manifest) {
@@ -25,13 +25,12 @@ for (const entry of manifest) {
   await sharp(input)
     .rotate()
     .resize({
-      width: widthsByCategory[entry.category] ?? 1800,
+      width: widthsByCategory[entry.category] ?? 1600,
       withoutEnlargement: true
     })
-    .jpeg({
-      quality: 84,
-      mozjpeg: true,
-      progressive: true
+    .webp({
+      quality: 78,
+      effort: 6
     })
     .toFile(output);
 

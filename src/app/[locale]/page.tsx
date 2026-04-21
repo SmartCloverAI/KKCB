@@ -127,7 +127,7 @@ export default async function HomePage({
             ))}
           </div>
         </div>
-        <MediaCard id="strength-pose" locale={locale} />
+        <MediaCard id="prayer-hands-bedside" locale={locale} />
       </section>
 
       <section className="section">

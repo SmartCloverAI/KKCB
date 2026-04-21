@@ -295,8 +295,8 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         "Am inclus materiale istorice si fotografie documentara pentru a arata ca initiativa romaneasca nu porneste din vid, ci dintr-o genealogie de practica si voluntariat.",
       imageIds: [
         "thumbs-up-bedside",
-        "origami-hope",
-        "historic-napoli-2013",
+        "team-with-student",
+        "founder-raby",
         "historic-rome-2012",
         "italian-press"
       ]
@@ -335,7 +335,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           {
             year: "2012",
             title: "Context european",
-            body: "Arhiva din Roma si Napoli arata continuitatea practicii si a comunitatii Budo din jurul programului."
+            body: "Arhiva europeana arata continuitatea practicii si a comunitatii Budo din jurul programului."
           },
           {
             year: "2017-2019",
@@ -605,8 +605,8 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         "Historic material and documentary photography show that the Romanian initiative does not start from zero but from a longer genealogy of practice and volunteering.",
       imageIds: [
         "thumbs-up-bedside",
-        "origami-hope",
-        "historic-napoli-2013",
+        "team-with-student",
+        "founder-raby",
         "historic-rome-2012",
         "italian-press"
       ]
@@ -645,7 +645,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           {
             year: "2012",
             title: "European context",
-            body: "Archive material from Rome and Naples shows continuity of practice and Budo community around the program."
+            body: "European archive material shows continuity of practice and Budo community around the program."
           },
           {
             year: "2017-2019",
