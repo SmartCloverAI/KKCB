@@ -31,6 +31,7 @@ This repository hosts the public website for `Kids Kicking Cancer with Budo Roma
 
 - install: `npm install`
 - verify empty raw inbox: `npm run media:check`
+- verify version bump rule: `npm run version:check`
 - process images: `npm run media:process`
 - tests: `npm test`
 - typecheck: `npm run typecheck`
@@ -54,3 +55,4 @@ This repository hosts the public website for `Kids Kicking Cancer with Budo Roma
 - Prefer real archive photography over decorative filler.
 - Treat the research page as an agenda and partnership invitation, not as proof beyond available evidence.
 - `_raw/` must stay empty in the committed repo state except for `.gitkeep`.
+- Every repository change set must include a version bump in `package.json`, with `package-lock.json` kept in sync.

@@ -1,6 +1,6 @@
 {
   "name": "kkcb",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,8 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "media:check": "node scripts/check-raw-empty.mjs",
+    "version:check": "node scripts/check-version-bump.mjs",
     "media:process": "node scripts/process-raw-assets.mjs",
-    "test": "npm run media:check && vitest run",
+    "test": "npm run media:check && npm run version:check && vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
   },

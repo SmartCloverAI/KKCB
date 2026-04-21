@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { SiteFooter, SiteHeader } from "@/components/site-ui";
 import { getDictionary } from "@/content/site";
 import type { Locale } from "@/lib/i18n";
+import { SITE_VERSION_LABEL } from "@/lib/site-version";
 import { ensureLocale, getLocaleTag } from "@/lib/site-utils";
 
 export function generateStaticParams() {
@@ -40,7 +41,7 @@ export default async function LocaleLayout({
     <div className="site-frame" lang={getLocaleTag(locale)}>
       <SiteHeader dictionary={dictionary} locale={locale} />
       {children}
-      <SiteFooter dictionary={dictionary} />
+      <SiteFooter dictionary={dictionary} versionLabel={SITE_VERSION_LABEL} />
     </div>
   );
 }

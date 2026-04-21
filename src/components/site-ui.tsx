@@ -15,6 +15,7 @@ type HeaderProps = {
 
 type FooterProps = {
   dictionary: SiteDictionary;
+  versionLabel: string;
 };
 
 type SectionIntroProps = {
@@ -60,12 +61,16 @@ export function SiteHeader({ locale, dictionary }: HeaderProps) {
   );
 }
 
-export function SiteFooter({ dictionary }: FooterProps) {
+export function SiteFooter({ dictionary, versionLabel }: FooterProps) {
   return (
     <footer className="site-footer">
       <div className="site-footer__intro">
         <p className="eyebrow">{dictionary.brand.name}</p>
         <p>{dictionary.footer.mission}</p>
+        <p className="site-footer__version">
+          <span>{dictionary.footer.versionLabel}</span>
+          <strong>{versionLabel}</strong>
+        </p>
       </div>
       <div className="site-footer__details">
         <div>

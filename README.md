@@ -13,6 +13,8 @@ npm run typecheck
 npm run dev
 ```
 
+`npm test` now enforces the repository rule that every change set must include a version bump in `package.json` and a synced `package-lock.json`.
+
 ## Production
 
 For a standard production build and local production run:
@@ -32,6 +34,12 @@ npm run media:process
 npm run build
 npm run start
 ```
+
+## Versioning Rule
+
+- Any repository modification must include a version bump in `package.json`.
+- Keep `package-lock.json` in sync with the bumped package version.
+- Run `npm run version:check` directly if you want to verify the rule without running the full test suite.
 
 ## Content structure
 

@@ -147,6 +147,7 @@ export type SiteDictionary = {
     addressLabel: string;
     addressLines: string[];
     legalLines: string[];
+    versionLabel: string;
   };
 };
 
@@ -457,7 +458,8 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       legalLines: [
         "KIDS KICKING CANCER WITH BUDO",
         "DOSAR NR. 26674/301/394/26.11.2025"
-      ]
+      ],
+      versionLabel: "Versiune"
     }
   },
   en: {
@@ -766,7 +768,8 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       legalLines: [
         "KIDS KICKING CANCER WITH BUDO",
         "DOSAR NR. 26674/301/394/26.11.2025"
-      ]
+      ],
+      versionLabel: "Version"
     }
   }
 };
