@@ -6,27 +6,25 @@ author: KKCB Romania Team
 coverId: thumbs-up-bedside
 ---
 
-At first glance, someone might assume the program is just an encouraging visit or a symbolic demonstration. In practice, the right bedside intervention depends on **rhythm**, **discipline**, and **adaptation to medical reality**.
+At first glance, someone might assume the program is only an encouraging visit or a symbolic demonstration. In practice, an appropriate bedside intervention depends on **rhythm**, **discipline**, and **adaptation to medical reality**.
 
 ## What a well-prepared volunteer brings
 
 - a calm, recognizable relationship
 - short breath and focus exercises
-- simple physical cues that increase a sense of control
+- simple physical cues that provide clear points of orientation during the session
 - a coherent language between child, family, and the surrounding team
 
-The volunteer does not enter the hospital to replace a physician or psychologist. They enter to give the child a different inner position toward treatment: less panic, more participation.
+The volunteer does not enter the hospital to replace a physician or psychologist. They contribute a calm presence, short exercises, and a recognizable framework that can support the child during treatment.
 
 ## Why continuity matters
 
-Children retain a method more easily when they encounter it repeatedly. That is why we want to build a program that can return, document, and learn from each iteration. The website is part of that continuity: it explains the method publicly, attracts volunteers, and creates a shared language.
+Children recognize a method more easily when they encounter it repeatedly in a consistent setting adapted to medical reality. Continuity helps families, volunteers, and the surrounding team use the same language of breath, attention, and encouragement.
 
-## What comes next
+## What responsible practice requires
 
-In the next phase we plan to publish:
-
-- volunteer criteria
-- the partnerships we are seeking
-- session examples and field stories
+- respect for medical guidance and for the limits of each clinical setting
+- exercises adapted to the child's age, condition, and energy
+- careful collaboration with the family and clinical staff
 
 The goal is not to dramatize hospital life. The goal is to make room for courage in a setting where the child often has very little control.

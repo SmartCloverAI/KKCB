@@ -6,27 +6,25 @@ author: Echipa KKCB Romania
 coverId: thumbs-up-bedside
 ---
 
-La prima vedere, cineva ar putea crede ca programul nostru inseamna doar o vizita incurajatoare sau o demonstratie simbolica. In realitate, interventia potrivita la patul copilului are nevoie de **ritm**, **disciplina** si **adaptare la contextul medical**.
+La prima vedere, cineva ar putea crede ca programul nostru inseamna doar o vizita incurajatoare sau o demonstratie simbolica. In realitate, o interventie potrivita la patul copilului are nevoie de **ritm**, **disciplina** si **adaptare la contextul medical**.
 
 ## Ce aduce un voluntar bine pregatit
 
 - o relatie calma si recognoscibila
 - exercitii scurte de respiratie si focalizare
-- gesturi corporale simple care cresc sentimentul de control
+- gesturi corporale simple care ofera repere clare in timpul interventiei
 - un limbaj coerent intre copil, familie si echipa din jur
 
-Voluntarul nu intra in spital ca sa preia locul medicului sau al psihologului. Intra ca sa ofere copilului o alta pozitie interioara in raport cu tratamentul: mai putina anticipare panicoasa, mai multa participare.
+Voluntarul nu intra in spital ca sa preia locul medicului sau al psihologului. El contribuie cu o prezenta calma, cu exercitii scurte si cu un cadru recognoscibil care poate sprijini copilul in timpul tratamentului.
 
 ## De ce conteaza continuitatea
 
-Un copil retine mai usor o metoda atunci cand o intalneste repetat. De aceea, vrem sa construim un program care poate reveni, documenta si invata din fiecare iteratie. Site-ul nostru este si un instrument pentru aceasta continuitate: explica public metoda, atrage voluntari si creeaza un limbaj comun.
+Un copil recunoaste mai usor o metoda atunci cand o intalneste repetat, intr-un cadru consecvent si adaptat situatiei medicale. Continuitatea ajuta familia, voluntarii si echipa din jur sa foloseasca acelasi limbaj de respiratie, atentie si incurajare.
 
-## Cum pregatim urmatorul pas
+## Ce presupune un cadru responsabil
 
-In etapa urmatoare vom publica:
-
-- criterii pentru voluntari
-- parteneriatele pe care le cautam
-- exemple de sesiuni si povesti din teren
+- respectarea indicatiilor medicale si a limitelor fiecarui context clinic
+- adaptarea exercitiilor la varsta, starea si energia copilului
+- colaborare atenta cu familia si personalul medical
 
 Scopul nu este sa dramatizam spitalul. Scopul este sa facem loc curajului intr-un context in care copilul are foarte putin control.

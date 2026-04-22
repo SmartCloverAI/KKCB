@@ -80,7 +80,7 @@ export function SiteFooter({ dictionary, versionLabel }: FooterProps) {
           ))}
         </div>
         <div>
-          <h2>Legal</h2>
+          <h2>{dictionary.footer.legalLabel}</h2>
           {dictionary.footer.legalLines.map((line) => (
             <p key={line}>{line}</p>
           ))}

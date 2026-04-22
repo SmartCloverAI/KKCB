@@ -33,7 +33,7 @@ export default async function ResearchPage({
               <h3>{item.title}</h3>
               <p>{item.body}</p>
               <a className="text-link" href={item.href} rel="noreferrer" target="_blank">
-                Open reference
+                {page.referenceLinkLabel}
               </a>
             </article>
           ))}

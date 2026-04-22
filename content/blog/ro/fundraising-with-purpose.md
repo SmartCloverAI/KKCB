@@ -10,24 +10,24 @@ Fundraising-ul bun nu inseamna presiune emotionala permanenta. Inseamna sa expli
 
 ## Ce poate finanta o campanie
 
-- sesiuni bedside si logistica pentru voluntari
+- sesiuni la patul copilului si logistica pentru voluntari
 - documentare foto si video responsabila
 - materiale educationale pentru familii si parteneri
 - pregatirea de proiecte pilot si granturi
 
-## Ce vrem sa evitam
+## Cum se vede impactul unei donatii
 
-Nu vrem un site care cere bani fara context. Vrem un site care face vizibila relatia dintre donatie si impact:
+O strangere de fonduri responsabila face vizibila relatia dintre donatie si activitatea concreta:
 
 - copilul are un instrument de reglare
 - familia simte sprijin si coerenta
-- organizatia poate documenta si extinde programul
+- organizatia poate sustine activitatea, formarea si documentarea responsabila
 
 ## Idei de campanii potrivite pentru KKCB Romania
 
 - campanii de zi de nastere
 - provocari sportive sau Budo
 - seri caritabile si licitatii mici
-- initiative corporate sau school-based
+- initiative ale companiilor sau proiecte scolare
 
-Pe termen lung, fundraising-ul trebuie sa sustina si cercetarea, nu doar activitatea curenta. Asa se construieste increderea: prin claritate, consistenta si rezultate care pot fi povestite onest.
+Pe termen lung, strangerea de fonduri poate sustine atat activitatea curenta, cat si proiectele de cercetare si dezvoltare institutionala. Increderea se construieste prin claritate, consecventa si printr-o explicatie onesta a modului in care sunt folosite resursele.

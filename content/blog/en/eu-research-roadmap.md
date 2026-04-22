@@ -6,30 +6,23 @@ author: KKCB Romania Team
 coverId: team-with-student
 ---
 
-If the method is going to grow well in Romania, it is not enough to say that it works. We need a research agenda that can be explained, funded, and evaluated.
+If the method is going to develop responsibly in Romania, it is not enough to say that it has value. It needs projects that can be explained, evaluated, and discussed with clinical and academic partners.
 
-## Where we can start
+## What can be documented realistically
 
-We already have three strong assets:
+The first research questions can examine:
 
-1. a raw visual archive of interventions and community
-2. comparable international initiatives
-3. growing interest in non-pharmacological pediatric support
+1. how children describe pain and procedural stress before and after sessions
+2. procedural tolerance and the quality of cooperation during interventions
+3. feedback from families and clinical staff on the method's feasibility
 
-## What kinds of projects make sense
-
-The first layer is local pilot work:
-
-- perceived pain before and after sessions
-- anticipatory stress tracking
-- family and clinical feedback
-
-The second layer is grant and consortium building:
+## Who collaboration should involve
 
 - partnerships with universities
-- European projects dedicated to pediatric wellbeing
-- collaborations with NGOs and hospitals able to replicate the methodology
+- collaborations with hospitals and clinical teams interested in complementary interventions
+- European projects focused on pediatric wellbeing and social innovation
+- exchange with NGOs working in pediatric oncology or emotional support for children
 
-## Why the website matters
+## Why this direction matters
 
-A funder or academic partner does not only need enthusiasm. They need an organization that can publicly express its mission, working hypotheses, and capacity to document its activity. That is why the research page and the blog are infrastructure, not decorative communication pieces.
+A funder or academic partner needs clarity, seriousness, and well-contextualized information. An organization that formulates its research questions carefully and documents its work responsibly is better placed to build trust, partnerships, and sustainable projects.

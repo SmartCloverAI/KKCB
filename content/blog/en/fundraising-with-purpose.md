@@ -13,15 +13,15 @@ Good fundraising is not permanent emotional pressure. It is the discipline of ex
 - bedside sessions and volunteer logistics
 - responsible photo and video documentation
 - educational resources for families and partners
-- pilot-project and grant preparation
+- pilot projects and grant preparation
 
-## What we want to avoid
+## How the impact of a donation becomes visible
 
-We do not want a site that asks for money without context. We want a site that makes the relationship between donation and impact visible:
+Responsible fundraising makes the relationship between donation and concrete activity visible:
 
 - a child gains a regulation tool
 - a family experiences support and coherence
-- the organization can document and scale the program
+- the organization can sustain activity, training, and responsible documentation
 
 ## Campaign ideas that fit KKCB Romania
 
@@ -30,4 +30,4 @@ We do not want a site that asks for money without context. We want a site that m
 - charity evenings and small auctions
 - school-based or corporate initiatives
 
-Over time, fundraising should support research as well as current activity. That is how trust is built: through clarity, consistency, and outcomes that can be described honestly.
+Over time, fundraising can support both current activity and research or organizational development. Trust is built through clarity, consistency, and an honest explanation of how resources are used.

@@ -114,6 +114,7 @@ export type SiteDictionary = {
     research: {
       title: string;
       lede: string;
+      referenceLinkLabel: string;
       focus: Array<{
         title: string;
         body: string;
@@ -145,6 +146,7 @@ export type SiteDictionary = {
   footer: {
     mission: string;
     addressLabel: string;
+    legalLabel: string;
     addressLines: string[];
     legalLines: string[];
     versionLabel: string;
@@ -156,7 +158,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     meta: {
       title: "Kids Kicking Cancer with Budo Romania",
       description:
-        "Site bilingv pentru capitolul romanesc Kids Kicking Cancer with Budo: voluntariat in spitale, cercetare, fundraising si povesti despre curaj."
+        "Prezentare bilingva a capitolului romanesc Kids Kicking Cancer with Budo: voluntariat in spitale, cercetare, strangere de fonduri si povesti despre curaj."
     },
     brand: {
       name: "Kids Kicking Cancer with Budo",
@@ -187,19 +189,19 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         variant: "secondary"
       },
       note:
-        "Construim site-ul ca baza pentru voluntariat, proiecte europene, strangere de fonduri si o crestere continua a capitolului din Romania.",
+        "Organizatia reuneste voluntariatul in spitale, cercetarea aplicata si mobilizarea de resurse in sprijinul copiilor aflati in tratament.",
       imageId: "hero-bedside-punch",
       highlights: [
-        { value: "3 directii", label: "voluntariat, cercetare, fundraising" },
-        { value: "2 limbi", label: "romana si engleza din prima zi" },
-        { value: "1 misiune", label: "mai putina frica, mai multa agentivitate" }
+        { value: "3 directii", label: "voluntariat, cercetare, strangere de fonduri" },
+        { value: "Bilingv", label: "romana si engleza" },
+        { value: "1 misiune", label: "curaj, reglare si sprijin" }
       ]
     },
     chapter: {
       eyebrow: "Identitate locala",
       title: "Un capitol romanesc cu radacini internationale si misiune clara.",
       body:
-        "Site-ul trebuie sa spuna din primul ecran cine suntem, de ce existam si de ce metoda Budo merita vizibilitate publica, parteneri medicali si finantare pe termen lung.",
+        "Prezentam misiunea organizatiei, legatura cu miscarea internationala si modurile in care metoda Budo poate fi sustinuta in Romania prin voluntariat, parteneriate si finantare responsabila.",
       facts: [
         "Capitol activ in Bucuresti, Sector 3",
         "Autorizare obtinuta in 2025",
@@ -208,10 +210,10 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       detailLinkLabel: "Vezi datele oficiale"
     },
     pillars: {
-      eyebrow: "Ce construim",
-      title: "Trei axe care pot face capitolul romanesc relevant si sustenabil.",
+      eyebrow: "Directii de actiune",
+      title: "Trei directii care sustin dezvoltarea capitolului romanesc.",
       intro:
-        "Am structurat site-ul in jurul activitatilor pe care organizatia vrea sa le creasca, fara sa diluam nucleul terapeutic al metodei.",
+        "Activitatea organizatiei urmareste trei directii complementare, toate legate de interventia terapeutica de la patul copilului.",
       items: [
         {
           title: "Voluntariat in spitale",
@@ -223,14 +225,14 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         {
           title: "Cercetare si proiecte cu finantare UE",
           body:
-            "Creionam o agenda publica pentru studii, parteneriate universitare, granturi si proiecte care pot demonstra mai riguros efectele metodei asupra durerii, stresului si aderentei la tratament.",
+            "Urmarim o agenda publica de studii, parteneriate universitare, granturi si proiecte care pot documenta mai riguros efectele metodei asupra durerii, stresului si tolerantei la tratament.",
           href: "/research",
           linkLabel: "Agenda de cercetare"
         },
         {
           title: "Strangere de fonduri cu sens",
           body:
-            "Nu doar cerem donatii; explicam exact ce finanteaza ele: sesiuni la patul copilului, formare, documentare, campanii de awareness si infrastructura de cercetare.",
+            "Aratam clar ce pot sustine donatiile: sesiuni la patul copilului, formare, documentare responsabila, campanii publice si initiative de cercetare.",
           href: "/blog",
           linkLabel: "Idei si povesti"
         }
@@ -240,7 +242,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Cum functioneaza",
       title: "Budo ca metoda de reglare, nu ca simpla metafora motivationala.",
       intro:
-        "Mesajul central al site-ului este ca metoda nu promite miracole. Ea ofera instrumente concrete pe care copilul le poate folosi in timpul procedurilor, intre proceduri si acasa.",
+        "Metoda nu promite miracole. Ea ofera instrumente concrete pe care copilul le poate exersa in timpul procedurilor, intre proceduri si in afara spitalului.",
       steps: [
         {
           title: "Respiratie",
@@ -261,9 +263,9 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     },
     evidence: {
       eyebrow: "Inspiratie si credibilitate",
-      title: "Site-ul ancoreaza cauza in dovezi, in retele similare si in exemple de fundraising clar structurat.",
+      title: "Cauza este ancorata in dovezi, initiative comparabile si practici transparente de implicare publica.",
       intro:
-        "Am folosit surse oficiale si initiative comparabile pentru a modela continutul: metoda terapeutica, paginile de implicare si modul in care cercetarea devine parte vizibila din poveste.",
+        "Resursele si organizatiile de mai jos ofera context pentru felul in care terapia complementara, cercetarea si implicarea comunitara pot fi prezentate cu rigoare.",
       items: [
         {
           title: "MATIO / fostul Kids Kicking Cancer",
@@ -275,14 +277,14 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         {
           title: "Children with Cancer UK",
           body:
-            "Un model bun pentru felul in care cercetarea, sprijinul pentru familii si awareness-ul pot fi explicate in aceeasi arhitectura de site, fara competitie intre ele.",
+            "Un reper util pentru felul in care cercetarea, sprijinul pentru familii si campaniile publice pot fi explicate coerent.",
           href: "https://www.childrenwithcancer.org.uk/about-us/",
           source: "childrenwithcancer.org.uk"
         },
         {
           title: "World Child Cancer",
           body:
-            "O referinta utila pentru limbajul orientat spre sisteme, politici publice si parteneriate internationale, nu doar spre fundraising punctual.",
+            "O referinta utila pentru limbajul orientat spre sisteme, politici publice si parteneriate internationale, nu doar spre campanii punctuale de strangere de fonduri.",
           href: "https://worldchildcancer.org/mission-vision/",
           source: "worldchildcancer.org"
         }
@@ -292,7 +294,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Memorie vie",
       title: "Arhiva vizuala arata ca programul are istorie, chipuri si continuitate.",
       intro:
-        "Am inclus materiale istorice si fotografie documentara pentru a arata ca initiativa romaneasca nu porneste din vid, ci dintr-o genealogie de practica si voluntariat.",
+        "Materialele istorice si fotografia documentara arata ca initiativa din Romania se inscrie intr-o continuitate mai larga de practica, voluntariat si colaborare internationala.",
       imageIds: [
         "thumbs-up-bedside",
         "team-with-student",
@@ -302,10 +304,10 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       ]
     },
     blog: {
-      eyebrow: "Blog si continut viu",
-      title: "Blogul nu este decor. Este motorul de incredere, invatare si crestere.",
+      eyebrow: "Actualizari si perspective",
+      title: "Articole care ofera context, exemple si continuitate.",
       intro:
-        "Am pornit cu articole care pot sustine trei tipuri de relatie: voluntari noi, parteneri institutionali si donatori care vor sa inteleaga clar cauza.",
+        "Publicam texte despre voluntariat, metoda Budo, cercetare si strangere de fonduri pentru familii, voluntari, parteneri si sustinatori.",
       cta: {
         href: "/blog",
         label: "Toate articolele",
@@ -313,9 +315,9 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       }
     },
     finalCta: {
-      title: "Pregatim un site care poate fi imbunatatit continuu, nu doar lansat.",
+      title: "Sustine dezvoltarea capitolului din Romania.",
       body:
-        "Scaffold-ul include continut bilingv, blog, galerie media procesata si documentatie pentru urmatoarele iteratii: donatii, newsletter, studii, parteneri medicali si campanii publice.",
+        "KKCB Romania isi propune sa consolideze voluntariatul in spitale, parteneriatele de cercetare si campaniile de strangere de fonduri care pot sustine activitatea pe termen lung.",
       actions: [
         { href: "/get-involved", label: "Vreau sa ajut", variant: "primary" },
         { href: "/contact", label: "Date legale si adresa", variant: "secondary" }
@@ -325,11 +327,11 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       about: {
         title: "Despre capitolul din Romania",
         lede:
-          "Aici spunem povestea local, dar fara sa pierdem legatura cu istoria internationala a miscarii.",
+          "Povestea capitolului romanesc ramane legata de istoria internationala a miscarii si de experienta acumulata in interventiile documentate pana acum.",
         storyTitle: "De la mostenirea internationala la un capitol local solid",
         storyBody: [
-          "Kids Kicking Cancer with Budo Romania poate folosi site-ul ca punct de convergenta intre memorie, legitimitate si actiune publica. Materialele brute din arhiva arata bedside work, contexte internationale si aparitii in presa care pot sustine acest fir narativ.",
-          "Pe pagina de prezentare am prioritizat claritatea: cine suntem, ce fel de metoda propunem, de ce capitolul romanesc merita sprijin si cum poate evolua intr-o organizatie capabila sa livreze programe, sa atraga granturi si sa construiasca o comunitate."
+          "Arhiva fotografica si documentara arata interventii la patul copilului, contexte internationale si aparitii publice care ofera continuitate si legitimitate demersului din Romania.",
+          "Capitolul romanesc isi afirma misiunea printr-o metoda complementara, o comunitate de voluntari si o deschidere spre parteneriate clinice, academice si civice."
         ],
         milestones: [
           {
@@ -340,19 +342,19 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           {
             year: "2017-2019",
             title: "Documentarea interventiilor la patul copilului",
-            body: "Fotografiile brute ofera o baza puternica pentru storytelling autentic si pentru incredere institutionala."
+            body: "Fotografiile documentare surprind prezenta voluntarilor si aplicarea metodei in mediul spitalicesc."
           },
           {
             year: "2025",
             title: "Autorizarea din Romania",
-            body: "Site-ul transforma actul administrativ intr-o identitate publica coerenta si usor de validat."
+            body: "Autorizarea din Romania a oferit un cadru juridic clar pentru dezvoltarea organizatiei."
           }
         ]
       },
       method: {
         title: "Metoda Budo",
         lede:
-          "Explicam metoda ca pe un set de practici de reglare si empowerment, nu ca pe un discurs inspirational vag.",
+          "Prezentam metoda ca pe un set de practici de reglare emotionala si participare activa, nu ca pe un discurs inspirational vag.",
         principles: [
           {
             title: "Instrumente simple, repetabile",
@@ -360,11 +362,11 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           },
           {
             title: "Adaptare la realitatea spitalului",
-            body: "Metoda trebuie prezentata ca flexibila: functioneaza la pat, in sala de tratament, in grupuri mici sau in contexte comunitare."
+            body: "Metoda se adapteaza contextului medical: la patul copilului, in sala de tratament, in grupuri mici sau in contexte comunitare."
           },
           {
             title: "Colaborare cu medicina, nu in locul ei",
-            body: "Site-ul subliniaza constant ca interventia este complementara, non-farmacologica si compatibila cu planul medical."
+            body: "Interventia este complementara, non-farmacologica si compatibila cu planul medical."
           }
         ],
         quote:
@@ -373,7 +375,8 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       research: {
         title: "Cercetare, granturi si vizibilitate europeana",
         lede:
-          "Pagina de cercetare este construita ca punte intre practica de la patul copilului si proiecte serioase cu parteneri clinici, academici si financiatori.",
+          "KKCB Romania urmareste sa dezvolte proiecte de cercetare impreuna cu parteneri clinici, academici si institutionali.",
+        referenceLinkLabel: "Vezi referinta",
         focus: [
           {
             title: "Studii pilot in Romania",
@@ -381,17 +384,17 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           },
           {
             title: "Consortii europene",
-            body: "Parteneriate cu universitati, spitale si ONG-uri pentru granturi orientate spre inovatie sociala si wellbeing pediatric."
+            body: "Parteneriate cu universitati, spitale si ONG-uri pentru granturi orientate spre inovatie sociala si bunastare pediatrica."
           },
           {
-            title: "Cercetare aplicata pentru awareness",
+            title: "Cercetare aplicata pentru vizibilitate publica",
             body: "Traducerea rezultatelor in materiale publice, conferinte, blog si campanii care fac metoda inteligibila pentru publicul larg."
           }
         ],
         inspirations: [
           {
             title: "MATIO Research & Resources",
-            body: "Model de pagina care aduna studii, resurse si materiale accesibile pentru familii si profesionisti.",
+            body: "Resurse care reunesc studii, materiale accesibile si context util pentru familii si profesionisti.",
             href: "https://mymatio.org/resources/"
           },
           {
@@ -401,7 +404,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           },
           {
             title: "Dăruiește Viață",
-            body: "Reper local pentru comunicarea transparenta a proiectelor pediatrice, fundraising si mobilizare civica.",
+            body: "Reper local pentru comunicarea transparenta a proiectelor pediatrice, strangere de fonduri si mobilizare civica.",
             href: "https://www.daruiesteviata.ro/en/proiecte/children-s-call-for-hope"
           }
         ]
@@ -409,7 +412,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       getInvolved: {
         title: "Cum te implici",
         lede:
-          "Pagina de implicare trebuie sa converteasca trei tipuri de energie: timp, expertiza si bani.",
+          "Organizatia poate fi sprijinita prin timp, expertiza profesionala si resurse financiare.",
         cards: [
           {
             title: "Voluntariat",
@@ -417,11 +420,11 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           },
           {
             title: "Parteneriate",
-            body: "Pentru spitale, universitati, grant writers, sponsori si companii care cauta proiecte credibile si documentabile."
+            body: "Pentru spitale, universitati, specialisti in scriere de granturi, sponsori si companii care cauta proiecte credibile si documentabile."
           },
           {
             title: "Fundraising comunitar",
-            body: "Pentru campanii de zi de nastere, challenge-uri sportive, evenimente la scoala sau implicare corporate."
+            body: "Pentru campanii de zi de nastere, provocari sportive, evenimente la scoala sau implicarea companiilor."
           }
         ],
         actions: [
@@ -432,7 +435,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       contact: {
         title: "Date de identificare",
         lede:
-          "Am construit o pagina simpla si credibila pentru informatia juridica si punctul fizic de referinta al organizatiei.",
+          "Mai jos sunt prezentate datele juridice si adresa organizatiei.",
         visitTitle: "Adresa",
         visitBody: [
           "Mămulari 2, Bl. C1, Sc. 2, Et. 2, Ap. 27",
@@ -442,8 +445,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         legalTitle: "Identificare administrativa",
         legalBody: [
           "KIDS KICKING CANCER WITH BUDO",
-          "Act autorizare: DOSAR NR. 26674/301/394/26.11.2025",
-          "Canalele publice de contact si donatie pot fi adaugate in etapa urmatoare a site-ului."
+          "Act autorizare: DOSAR NR. 26674/301/394/26.11.2025"
         ]
       }
     },
@@ -451,6 +453,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       mission:
         "Misiunea noastra este sa oferim copiilor aflati in tratament instrumente de reglare, curaj si apartenenta prin Budo, comunitate si proiecte sustenabile.",
       addressLabel: "Adresa",
+      legalLabel: "Date legale",
       addressLines: [
         "Mămulari 2, Bl. C1, Sc. 2, Et. 2, Ap. 27",
         "Bucuresti, Sector 3, Romania"
@@ -459,7 +462,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         "KIDS KICKING CANCER WITH BUDO",
         "DOSAR NR. 26674/301/394/26.11.2025"
       ],
-      versionLabel: "Versiune"
+      versionLabel: "Versiune publica"
     }
   },
   en: {
@@ -493,23 +496,23 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       },
       secondaryAction: {
         href: "/research",
-        label: "Explore the research track",
+        label: "Explore research priorities",
         variant: "secondary"
       },
       note:
-        "The site is designed as the operating base for volunteering, European projects, fundraising, and continuous growth of the Romanian chapter.",
+        "The organization brings together hospital volunteering, applied research, and resource mobilization in support of children undergoing treatment.",
       imageId: "hero-bedside-punch",
       highlights: [
-        { value: "3 tracks", label: "volunteering, research, fundraising" },
-        { value: "2 languages", label: "Romanian and English from day one" },
-        { value: "1 mission", label: "less fear, more agency" }
+        { value: "3 priorities", label: "volunteering, research, fundraising" },
+        { value: "Bilingual", label: "Romanian and English" },
+        { value: "1 mission", label: "courage, regulation, and support" }
       ]
     },
     chapter: {
       eyebrow: "Local identity",
       title: "A Romanian chapter with international roots and a clear public mission.",
       body:
-        "The site has to state from the first screen who we are, why we exist, and why the Budo method deserves public visibility, medical partnerships, and long-term funding.",
+        "We present the chapter's mission, its connection to the international movement, and the ways the Budo method can be supported in Romania through volunteering, partnerships, and responsible funding.",
       facts: [
         "Operating chapter based in Bucharest, Sector 3",
         "Authorized in 2025",
@@ -518,10 +521,10 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       detailLinkLabel: "See official details"
     },
     pillars: {
-      eyebrow: "What we are building",
-      title: "Three tracks that can make the Romanian chapter relevant and sustainable.",
+      eyebrow: "Focus areas",
+      title: "Three priorities that support the Romanian chapter.",
       intro:
-        "The site is structured around the activities the organization wants to grow, without diluting the therapeutic core of the method.",
+        "The organization's work follows three complementary priorities, all connected to bedside therapeutic support.",
       items: [
         {
           title: "Hospital volunteering",
@@ -533,14 +536,14 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         {
           title: "Research and EU-funded projects",
           body:
-            "We outline a public agenda for studies, academic partnerships, grants, and projects that can document the method's effects on pain, stress, and treatment resilience.",
+            "We pursue a public agenda of studies, academic partnerships, grants, and projects that can document the method's effects on pain, stress, and treatment resilience.",
           href: "/research",
-          linkLabel: "Research agenda"
+          linkLabel: "Research priorities"
         },
         {
           title: "Purposeful fundraising",
           body:
-            "We do not simply ask for donations. We explain exactly what they can fund: bedside sessions, training, documentation, awareness campaigns, and research infrastructure.",
+            "We explain what donations can support: bedside sessions, training, responsible documentation, public campaigns, and research initiatives.",
           href: "/blog",
           linkLabel: "Stories and ideas"
         }
@@ -550,7 +553,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "How it works",
       title: "Budo as a regulation method, not a motivational slogan.",
       intro:
-        "The site's central message is that the method does not promise miracles. It offers practical tools a child can use during procedures, between procedures, and at home.",
+        "The method does not promise miracles. It offers practical tools a child can practice during procedures, between procedures, and outside the hospital.",
       steps: [
         {
           title: "Breath",
@@ -571,9 +574,9 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     },
     evidence: {
       eyebrow: "Inspiration and credibility",
-      title: "The site anchors the cause in evidence, peer initiatives, and clearly structured public engagement.",
+      title: "The chapter is grounded in evidence, peer initiatives, and transparent public engagement.",
       intro:
-        "Official sources and comparable organizations informed the structure: therapeutic method, engagement pages, and the way research becomes a visible part of the story.",
+        "The sources and organizations below provide context for the way complementary therapy, research, and community engagement can be presented with rigor.",
       items: [
         {
           title: "MATIO / formerly Kids Kicking Cancer",
@@ -585,7 +588,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         {
           title: "Children with Cancer UK",
           body:
-            "A strong reference for explaining research, family support, and awareness inside one site architecture without making them compete with each other.",
+            "A useful reference for explaining research, family support, and public awareness in a coherent way.",
           href: "https://www.childrenwithcancer.org.uk/about-us/",
           source: "childrenwithcancer.org.uk"
         },
@@ -602,7 +605,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Living archive",
       title: "The visual archive shows history, faces, and continuity.",
       intro:
-        "Historic material and documentary photography show that the Romanian initiative does not start from zero but from a longer genealogy of practice and volunteering.",
+        "Historic material and documentary photography show that the Romanian initiative belongs to a wider continuity of practice, volunteering, and international collaboration.",
       imageIds: [
         "thumbs-up-bedside",
         "team-with-student",
@@ -612,10 +615,10 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       ]
     },
     blog: {
-      eyebrow: "Blog and living content",
-      title: "The blog is not decoration. It is the engine for trust, learning, and growth.",
+      eyebrow: "Updates and perspectives",
+      title: "Articles that offer context, examples, and continuity.",
       intro:
-        "We started with articles that can support three audiences: new volunteers, institutional partners, and donors who want a clear understanding of the cause.",
+        "The blog shares writing on bedside volunteering, the Budo method, research, and fundraising for families, volunteers, partners, and supporters.",
       cta: {
         href: "/blog",
         label: "Browse all articles",
@@ -623,9 +626,9 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       }
     },
     finalCta: {
-      title: "This is a site built for continuous improvement, not a one-off launch.",
+      title: "Support the growth of the Romanian chapter.",
       body:
-        "The scaffold already includes bilingual content, a blog, processed media, and documentation for the next iterations: donations, newsletter, studies, medical partners, and public campaigns.",
+        "KKCB Romania aims to strengthen hospital volunteering, research partnerships, and fundraising efforts that can sustain the work over time.",
       actions: [
         { href: "/get-involved", label: "I want to help", variant: "primary" },
         { href: "/contact", label: "Legal details and address", variant: "secondary" }
@@ -635,11 +638,11 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       about: {
         title: "About the Romanian chapter",
         lede:
-          "This page tells the story locally without losing the international history behind the movement.",
+          "The story of the Romanian chapter remains connected to the international history of the movement and to the experience documented so far.",
         storyTitle: "From international legacy to a credible local chapter",
         storyBody: [
-          "Kids Kicking Cancer with Budo Romania can use the site as a convergence point between memory, legitimacy, and public action. The raw archive already shows bedside work, international context, and press coverage strong enough to support that narrative.",
-          "The page prioritizes clarity: who we are, what kind of method we bring, why the Romanian chapter deserves support, and how it can evolve into an organization able to deliver programs, attract grants, and build a community."
+          "The photographic and documentary archive shows bedside interventions, international context, and public visibility that give continuity and legitimacy to the Romanian effort.",
+          "The Romanian chapter defines its mission through a complementary method, a volunteer community, and openness to clinical, academic, and civic partnerships."
         ],
         milestones: [
           {
@@ -650,19 +653,19 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           {
             year: "2017-2019",
             title: "Documented bedside work",
-            body: "The raw photography provides a strong base for authentic storytelling and institutional trust."
+            body: "Documentary photography captures the presence of volunteers and the use of the method in hospital settings."
           },
           {
             year: "2025",
             title: "Romanian authorization",
-            body: "The website turns an administrative record into a coherent public identity."
+            body: "Romanian authorization established a clear legal framework for the organization's development."
           }
         ]
       },
       method: {
         title: "The Budo method",
         lede:
-          "We frame the method as regulation and empowerment practice, not vague inspiration.",
+          "We present the method as a practice of regulation and active participation, not vague inspiration.",
         principles: [
           {
             title: "Simple, repeatable tools",
@@ -670,11 +673,11 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           },
           {
             title: "Adapted to hospital reality",
-            body: "The method needs to be described as flexible: bedside, treatment rooms, small groups, or community settings."
+            body: "The method adapts to hospital reality: at the bedside, in treatment rooms, in small groups, or in community settings."
           },
           {
             title: "Working with medicine, not instead of it",
-            body: "The site repeatedly clarifies that the intervention is complementary, non-pharmacological, and compatible with the medical care plan."
+            body: "The intervention is complementary, non-pharmacological, and compatible with the medical care plan."
           }
         ],
         quote:
@@ -683,7 +686,8 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       research: {
         title: "Research, grants, and European visibility",
         lede:
-          "The research page is designed as the bridge between bedside practice and serious projects with clinical, academic, and funding partners.",
+          "KKCB Romania seeks to develop research projects with clinical, academic, and institutional partners.",
+        referenceLinkLabel: "Open reference",
         focus: [
           {
             title: "Pilot studies in Romania",
@@ -701,7 +705,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         inspirations: [
           {
             title: "MATIO Research & Resources",
-            body: "A model page gathering studies, resources, and accessible material for families and professionals.",
+            body: "Resources that bring together studies, accessible materials, and useful context for families and professionals.",
             href: "https://mymatio.org/resources/"
           },
           {
@@ -719,7 +723,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       getInvolved: {
         title: "Get involved",
         lede:
-          "This page is built to convert three kinds of energy: time, expertise, and money.",
+          "The organization can be supported with time, professional expertise, and financial resources.",
         cards: [
           {
             title: "Volunteering",
@@ -742,7 +746,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       contact: {
         title: "Organization details",
         lede:
-          "A simple, credible page for legal identification and the physical point of reference of the organization.",
+          "Below are the organization's legal details and address.",
         visitTitle: "Address",
         visitBody: [
           "Mămulari 2, Building C1, Stair 2, Floor 2, Apartment 27",
@@ -752,8 +756,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         legalTitle: "Administrative identity",
         legalBody: [
           "KIDS KICKING CANCER WITH BUDO",
-          "Authorization record: DOSAR NR. 26674/301/394/26.11.2025",
-          "Public contact and donation channels can be added in the next phase of the site."
+          "Authorization record: DOSAR NR. 26674/301/394/26.11.2025"
         ]
       }
     },
@@ -761,6 +764,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       mission:
         "Our mission is to give children in treatment practical tools for regulation, courage, and belonging through Budo, community, and sustainable projects.",
       addressLabel: "Address",
+      legalLabel: "Legal details",
       addressLines: [
         "Mămulari 2, Building C1, Stair 2, Floor 2, Apartment 27",
         "Bucharest, Sector 3, Romania"
@@ -769,7 +773,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         "KIDS KICKING CANCER WITH BUDO",
         "DOSAR NR. 26674/301/394/26.11.2025"
       ],
-      versionLabel: "Version"
+      versionLabel: "Public version"
     }
   }
 };
