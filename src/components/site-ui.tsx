@@ -93,9 +93,11 @@ export function SiteFooter({ dictionary, versionLabel }: FooterProps) {
 export function SectionIntro({ eyebrow, title, intro }: SectionIntroProps) {
   return (
     <div className="section-intro">
-      <p className="eyebrow">{eyebrow}</p>
-      <h2>{title}</h2>
-      <p>{intro}</p>
+      <div className="section-intro__head">
+        <p className="eyebrow">{eyebrow}</p>
+        <h2>{title}</h2>
+      </div>
+      <p className="section-intro__copy">{intro}</p>
     </div>
   );
 }
@@ -105,8 +107,10 @@ export function PageHero({ title, lede }: PageHeroProps) {
     <section className="page-hero">
       <div className="page-hero__inner">
         <p className="eyebrow">Kids Kicking Cancer with Budo Romania</p>
-        <h1>{title}</h1>
-        <p>{lede}</p>
+        <div className="page-hero__content">
+          <h1>{title}</h1>
+          <p>{lede}</p>
+        </div>
       </div>
     </section>
   );

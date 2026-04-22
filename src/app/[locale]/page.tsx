@@ -58,18 +58,17 @@ export default async function HomePage({
           </div>
           <figcaption>{heroImage.localizedCaption}</figcaption>
         </figure>
+        <div className="highlights">
+          {dictionary.hero.highlights.map((item) => (
+            <div key={item.label} className="highlight">
+              <span>{item.value}</span>
+              <p>{item.label}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <section className="highlights">
-        {dictionary.hero.highlights.map((item) => (
-          <div key={item.label} className="highlight">
-            <span>{item.value}</span>
-            <p>{item.label}</p>
-          </div>
-        ))}
-      </section>
-
-      <section className="section">
+      <section className="section section--chapter">
         <SectionIntro
           eyebrow={dictionary.chapter.eyebrow}
           intro={dictionary.chapter.body}
@@ -89,7 +88,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--pillars">
         <SectionIntro
           eyebrow={dictionary.pillars.eyebrow}
           intro={dictionary.pillars.intro}
@@ -111,7 +110,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="section section--split">
+      <section className="section section--split section--method-home">
         <div>
           <SectionIntro
             eyebrow={dictionary.method.eyebrow}
@@ -130,7 +129,7 @@ export default async function HomePage({
         <MediaCard id="prayer-hands-bedside" locale={locale} />
       </section>
 
-      <section className="section">
+      <section className="section section--evidence">
         <SectionIntro
           eyebrow={dictionary.evidence.eyebrow}
           intro={dictionary.evidence.intro}
@@ -155,7 +154,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--archive-home">
         <SectionIntro
           eyebrow={dictionary.archive.eyebrow}
           intro={dictionary.archive.intro}
@@ -173,7 +172,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--blog-home">
         <SectionIntro
           eyebrow={dictionary.blog.eyebrow}
           intro={dictionary.blog.intro}
@@ -188,7 +187,7 @@ export default async function HomePage({
 
       <section className="final-cta">
         <div>
-          <p className="eyebrow">Continuous improvement</p>
+          <p className="eyebrow">{dictionary.finalCta.eyebrow}</p>
           <h2>{dictionary.finalCta.title}</h2>
         </div>
         <div>
