@@ -3,7 +3,8 @@ import Link from "next/link";
 
 import { getLocalizedMedia } from "@/content/media";
 import type { ActionLink, NavigationItem, SiteDictionary } from "@/content/site";
-import { LocaleSwitcher } from "@/components/locale-switcher";
+import { HeaderNavigation } from "@/components/header-nav";
+import { ServedByFooter } from "@/components/served-by";
 import { formatDate, withLocale } from "@/lib/site-utils";
 import type { BlogPostSummary } from "@/lib/content";
 import type { Locale } from "@/lib/i18n";
@@ -40,28 +41,13 @@ type BlogCardProps = {
 };
 
 export function SiteHeader({ locale, dictionary }: HeaderProps) {
-  return (
-    <header className="site-header">
-      <Link className="brandmark" href={`/${locale}`}>
-        <span className="brandmark__label">{dictionary.brand.name}</span>
-        <span className="brandmark__chapter">{dictionary.brand.chapter}</span>
-      </Link>
-      <nav className="site-nav" aria-label="Primary">
-        {dictionary.nav.map((item) => (
-          <Link key={item.href} href={withLocale(locale, item.href)}>
-            {item.label}
-          </Link>
-        ))}
-      </nav>
-      <div className="site-header__meta">
-        <span className="site-header__tagline">{dictionary.brand.tagline}</span>
-        <LocaleSwitcher locale={locale} />
-      </div>
-    </header>
-  );
+  return <HeaderNavigation dictionary={dictionary} locale={locale} />;
 }
 
 export function SiteFooter({ dictionary, versionLabel }: FooterProps) {
+  const servedByBrandPosition = dictionary.footer.servedByBrandPosition ?? "start";
+  const servedByBrandSuffix = dictionary.footer.servedByBrandSuffix;
+
   return (
     <footer className="site-footer">
       <div className="site-footer__intro">
@@ -71,6 +57,11 @@ export function SiteFooter({ dictionary, versionLabel }: FooterProps) {
           <span>{dictionary.footer.versionLabel}</span>
           <strong>{versionLabel}</strong>
         </p>
+        <ServedByFooter
+          brandPosition={servedByBrandPosition}
+          brandSuffix={servedByBrandSuffix}
+          label={dictionary.footer.servedByLabel}
+        />
       </div>
       <div className="site-footer__details">
         <div>

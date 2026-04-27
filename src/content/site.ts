@@ -151,6 +151,9 @@ export type SiteDictionary = {
     addressLines: string[];
     legalLines: string[];
     versionLabel: string;
+    servedByBrandPosition?: "start" | "end";
+    servedByBrandSuffix?: string;
+    servedByLabel: string;
   };
 };
 
@@ -464,7 +467,10 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         "KIDS KICKING CANCER WITH BUDO",
         "DOSAR NR. 26674/301/394/26.11.2025"
       ],
-      versionLabel: "Versiune publica"
+      versionLabel: "Versiune publica",
+      servedByBrandPosition: "end",
+      servedByBrandSuffix: "care serveste acest site:",
+      servedByLabel: "Edge nodul"
     }
   },
   en: {
@@ -776,7 +782,8 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         "KIDS KICKING CANCER WITH BUDO",
         "DOSAR NR. 26674/301/394/26.11.2025"
       ],
-      versionLabel: "Public version"
+      versionLabel: "Public version",
+      servedByLabel: "edge node serving this site:"
     }
   }
 };

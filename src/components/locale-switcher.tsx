@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -21,7 +22,11 @@ export function LocaleSwitcher({ locale }: LocaleSwitcherProps) {
   segments[0] = alternate;
 
   return (
-    <Link className="locale-switch" href={`/${segments.join("/")}`} prefetch={false}>
+    <Link
+      className="locale-switch locale-switch--pill"
+      href={`/${segments.join("/")}`}
+      prefetch={false}
+    >
       {alternate.toUpperCase()}
     </Link>
   );
