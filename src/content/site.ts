@@ -184,7 +184,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     },
     brand: {
       name: "Kids Kicking Cancer with Budo",
-      chapter: "Capitolul din Bucuresti",
+      chapter: "Bucuresti, Romania",
       tagline: "Power Peace Purpose"
     },
     nav: [
@@ -523,7 +523,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     },
     brand: {
       name: "Kids Kicking Cancer with Budo",
-      chapter: "Bucharest chapter",
+      chapter: "Bucharest, Romania",
       tagline: "Power Peace Purpose"
     },
     nav: [

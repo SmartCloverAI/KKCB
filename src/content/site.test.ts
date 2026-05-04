@@ -16,6 +16,11 @@ describe("site content governance", () => {
     }
   });
 
+  it("uses city and country as the visible brand location line", () => {
+    expect(siteContent.ro.brand.chapter).toBe("Bucuresti, Romania");
+    expect(siteContent.en.brand.chapter).toBe("Bucharest, Romania");
+  });
+
   it("uses the official tagline in both locales", () => {
     expect(siteContent.ro.brand.tagline).toBe("Power Peace Purpose");
     expect(siteContent.en.brand.tagline).toBe("Power Peace Purpose");
