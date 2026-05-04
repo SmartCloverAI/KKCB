@@ -90,7 +90,7 @@ export function HeaderNavigation({ locale, dictionary }: HeaderNavigationProps) 
           alt=""
           className="brandmark__logo"
           height={56}
-          src="/media/kids-kicking-cancer-with-budo-mark.webp"
+          src="/media/kids-kicking-cancer-with-budo-mark-v2.webp"
           width={56}
         />
         <span className="brandmark__text">
