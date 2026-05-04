@@ -1,4 +1,9 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+
+vi.mock("next/font/google", () => ({
+  Newsreader: () => ({ variable: "font-body" }),
+  Sora: () => ({ variable: "font-display" })
+}));
 
 import { metadata } from "@/app/layout";
 

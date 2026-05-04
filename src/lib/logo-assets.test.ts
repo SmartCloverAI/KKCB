@@ -41,6 +41,8 @@ async function measureVisibleBounds(assetPath: string) {
       top: minY
     },
     height: info.height,
+    visibleHeight: maxY - minY + 1,
+    visibleWidth: maxX - minX + 1,
     width: info.width
   };
 }
@@ -61,5 +63,37 @@ describe("header logo asset", () => {
     expect(Math.abs(bounds.centerOffsetX)).toBeLessThanOrEqual(12);
     expect(bounds.edgeMargins.left).toBeGreaterThanOrEqual(28);
     expect(bounds.edgeMargins.right).toBeGreaterThanOrEqual(28);
+  });
+});
+
+describe("footer logo asset", () => {
+  it("uses a cropped wide approved source", async () => {
+    const metadata = await sharp(
+      path.join(
+        process.cwd(),
+        "assets/originals/brand/kids-kicking-cancer-with-budo-logo-original.jpg"
+      )
+    ).metadata();
+
+    expect(metadata.width).toBeDefined();
+    expect(metadata.height).toBeDefined();
+    expect(metadata.width! / metadata.height!).toBeGreaterThan(2.4);
+  });
+
+  it("uses the corrected wide logo artwork in the footer", async () => {
+    const footerSource = await readFile(
+      path.join(process.cwd(), "src/components/site-ui.tsx"),
+      "utf8"
+    );
+    const sourceMatch = footerSource.match(
+      /src="(?<source>\/media\/kids-kicking-cancer-with-budo-logo-v2\.webp)"/
+    );
+
+    expect(sourceMatch?.groups?.source).toBeDefined();
+
+    const assetPath = path.join(process.cwd(), "public", sourceMatch!.groups!.source.slice(1));
+    const bounds = await measureVisibleBounds(assetPath);
+
+    expect(bounds.visibleWidth / bounds.visibleHeight).toBeGreaterThanOrEqual(2.85);
   });
 });
