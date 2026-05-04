@@ -51,7 +51,7 @@ describe("header logo asset", () => {
       path.join(process.cwd(), "src/components/header-nav.tsx"),
       "utf8"
     );
-    const sourceMatch = headerSource.match(/src="(?<source>\/media\/[^"]*mark[^"]*\.webp)"/);
+    const sourceMatch = headerSource.match(/src="(?<source>\/media\/LogoKKC\.png)"/);
 
     expect(sourceMatch?.groups?.source).toBeDefined();
 

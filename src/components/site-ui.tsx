@@ -109,8 +109,8 @@ export function SectionIntro({ eyebrow, title, intro }: SectionIntroProps) {
 
 export function PageHero({ title, lede }: PageHeroProps) {
   return (
-    <section className="page-hero">
-      <div className="page-hero__inner">
+    <section className="page-hero page-hero--centered">
+      <div className="page-hero__inner page-hero__inner--centered">
         <p className="eyebrow">Kids Kicking Cancer with Budo</p>
         <div className="page-hero__content">
           <h1>{title}</h1>
