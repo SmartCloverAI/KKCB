@@ -1,8 +1,8 @@
 ---
 title: O agenda de cercetare europeana pentru metoda Budo
-excerpt: De ce capitolul din Romania are nevoie de proiecte pilot, universitati partenere si granturi care transforma practica in dovezi publice.
+excerpt: De ce capitolul din Bucuresti are nevoie de proiecte pilot, universitati partenere si granturi care transforma practica in dovezi publice.
 publishedAt: 2026-04-17
-author: Echipa KKCB Romania
+author: Echipa Kids Kicking Cancer with Budo
 coverId: team-with-student
 ---
 

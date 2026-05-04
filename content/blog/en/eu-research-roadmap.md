@@ -1,8 +1,8 @@
 ---
 title: A European research roadmap for the Budo method
-excerpt: Why the Romanian chapter needs pilot projects, academic partners, and grants that turn bedside practice into public evidence.
+excerpt: Why the Bucharest chapter needs pilot projects, academic partners, and grants that turn bedside practice into public evidence.
 publishedAt: 2026-04-17
-author: KKCB Romania Team
+author: Kids Kicking Cancer with Budo Team
 coverId: team-with-student
 ---
 

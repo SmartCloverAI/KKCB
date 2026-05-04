@@ -15,9 +15,9 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Kids Kicking Cancer with Budo Romania",
+  title: "Kids Kicking Cancer with Budo",
   description:
-    "Bilingual public website for the Romanian chapter of Kids Kicking Cancer with Budo."
+    "Bilingual public website for the Bucharest chapter of Kids Kicking Cancer with Budo."
 };
 
 export default function RootLayout({

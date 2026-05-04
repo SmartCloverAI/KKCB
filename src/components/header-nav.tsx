@@ -6,6 +6,7 @@ import React, {
   useState,
   type MouseEvent as ReactMouseEvent
 } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -85,8 +86,17 @@ export function HeaderNavigation({ locale, dictionary }: HeaderNavigationProps) 
   return (
     <header className="site-header" ref={shellRef}>
       <Link className="brandmark brandmark--header" href={`/${locale}`}>
-        <span className="brandmark__label">{dictionary.brand.name}</span>
-        <span className="brandmark__chapter">{dictionary.brand.chapter}</span>
+        <Image
+          alt=""
+          className="brandmark__logo"
+          height={46}
+          src="/media/kids-kicking-cancer-with-budo-mark.webp"
+          width={46}
+        />
+        <span className="brandmark__text">
+          <span className="brandmark__label">{dictionary.brand.name}</span>
+          <span className="brandmark__chapter">{dictionary.brand.chapter}</span>
+        </span>
       </Link>
 
       <HeaderNavigationMenu

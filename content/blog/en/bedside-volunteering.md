@@ -2,7 +2,7 @@
 title: "Bedside volunteering: what meaningful presence really looks like"
 excerpt: What a Budo-based bedside intervention can look like in hospital and why continuity matters more than spectacle.
 publishedAt: 2026-04-21
-author: KKCB Romania Team
+author: Kids Kicking Cancer with Budo Team
 coverId: thumbs-up-bedside
 ---
 

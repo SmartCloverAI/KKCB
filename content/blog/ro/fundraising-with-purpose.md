@@ -2,7 +2,7 @@
 title: "Fundraising cu sens: cum strangem bani fara sa pierdem miza umana"
 excerpt: Donatiile trebuie legate clar de rezultate, procese si povesti credibile, nu doar de apeluri emotionale.
 publishedAt: 2026-04-12
-author: Echipa KKCB Romania
+author: Echipa Kids Kicking Cancer with Budo
 coverId: balloon-prep-bedside
 ---
 
@@ -23,7 +23,7 @@ O strangere de fonduri responsabila face vizibila relatia dintre donatie si acti
 - familia simte sprijin si coerenta
 - organizatia poate sustine activitatea, formarea si documentarea responsabila
 
-## Idei de campanii potrivite pentru KKCB Romania
+## Idei de campanii potrivite pentru Kids Kicking Cancer with Budo
 
 - campanii de zi de nastere
 - provocari sportive sau Budo

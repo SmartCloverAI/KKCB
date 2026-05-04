@@ -133,6 +133,16 @@ export type SiteDictionary = {
         title: string;
         body: string;
       }>;
+      bank: {
+        title: string;
+        intro: string;
+        holderLabel: string;
+        ibanLabel: string;
+        bicLabel: string;
+        holder: string;
+        iban: string;
+        bic: string;
+      };
       actions: ActionLink[];
     };
     contact: {
@@ -160,14 +170,14 @@ export type SiteDictionary = {
 export const siteContent: Record<Locale, SiteDictionary> = {
   ro: {
     meta: {
-      title: "Kids Kicking Cancer with Budo Romania",
+      title: "Kids Kicking Cancer with Budo",
       description:
-        "Site bilingv al Kids Kicking Cancer with Budo Romania: metoda Budo in sprijinul copiilor aflati in tratament, voluntariat in spitale, cercetare si strangere de fonduri."
+        "Site bilingv al Kids Kicking Cancer with Budo, capitolul din Bucuresti: metoda Budo in sprijinul copiilor aflati in tratament, voluntariat in spitale, cercetare si strangere de fonduri."
     },
     brand: {
       name: "Kids Kicking Cancer with Budo",
-      chapter: "Romania",
-      tagline: "Curaj, respiratie si sens in mijlocul tratamentului."
+      chapter: "Capitolul din Bucuresti",
+      tagline: "Power Peace Purpose"
     },
     nav: [
       { href: "/about", label: "Despre" },
@@ -181,7 +191,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Capitolul romanesc al miscarii Kids Kicking Cancer",
       title: "Transformam momentele de tratament in momente de curaj.",
       lede:
-        "KKCB Romania lucreaza cu copii aflati in tratament prin exercitii de respiratie, postura si concentrare inspirate din Budo, adaptate mediului medical si sustinute de voluntari pregatiti.",
+        "Capitolul din Bucuresti lucreaza cu copii aflati in tratament prin exercitii de respiratie, postura si concentrare inspirate din Budo, adaptate mediului medical si sustinute de voluntari pregatiti.",
       primaryAction: {
         href: "/get-involved",
         label: "Devino voluntar",
@@ -205,7 +215,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Identitate locala",
       title: "Capitolul din Romania aduce local o metoda cu istorie internationala.",
       body:
-        "KKCB Romania face parte din miscarea internationala Kids Kicking Cancer si lucreaza pentru a aduce metoda Budo in spitale, impreuna cu voluntari, familii si parteneri institutionali.",
+        "Capitolul din Bucuresti face parte din miscarea internationala Kids Kicking Cancer si lucreaza pentru a aduce metoda Budo in spitale, impreuna cu voluntari, familii si parteneri institutionali.",
       facts: [
         "Capitol activ in Bucuresti, Sector 3",
         "Autorizare obtinuta in 2025",
@@ -298,7 +308,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Arhiva programului",
       title: "Fotografiile din arhiva arata ca programul are istorie si activitate documentata.",
       intro:
-        "Imaginile surprind interventii la patul copilului, momente de formare si legatura directa cu comunitatea internationala din care face parte KKCB Romania.",
+        "Imaginile surprind interventii la patul copilului, momente de formare si legatura directa cu comunitatea internationala Kids Kicking Cancer.",
       imageIds: [
         "thumbs-up-bedside",
         "team-with-student",
@@ -322,7 +332,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Implica-te",
       title: "Ajuta-ne sa ducem aceasta munca mai departe in Romania.",
       body:
-        "KKCB Romania cauta voluntari, parteneri si sustinatori care pot mentine prezenta in spitale si pot sustine proiectele de cercetare si dezvoltare.",
+        "Capitolul din Bucuresti cauta voluntari, parteneri si sustinatori care pot mentine prezenta in spitale si pot sustine proiectele de cercetare si dezvoltare.",
       actions: [
         { href: "/get-involved", label: "Vreau sa ajut", variant: "primary" },
         { href: "/contact", label: "Date legale si adresa", variant: "secondary" }
@@ -380,7 +390,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       research: {
         title: "Cercetare, granturi si vizibilitate europeana",
         lede:
-          "KKCB Romania cauta spitale, universitati si finantatori care pot evalua metoda in proiecte pilot si granturi europene.",
+          "Capitolul din Bucuresti cauta spitale, universitati si finantatori care pot evalua metoda in proiecte pilot si granturi europene.",
         referenceLinkLabel: "Vezi referinta",
         focus: [
           {
@@ -417,7 +427,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       getInvolved: {
         title: "Cum te implici",
         lede:
-          "KKCB Romania are nevoie de oameni si institutii care pot sustine atat munca din spital, cat si dezvoltarea organizatiei.",
+          "Capitolul din Bucuresti are nevoie de oameni si institutii care pot sustine atat munca din spital, cat si dezvoltarea organizatiei.",
         cards: [
           {
             title: "Voluntariat",
@@ -432,6 +442,17 @@ export const siteContent: Record<Locale, SiteDictionary> = {
             body: "Pentru campanii locale, evenimente scolare, initiative sportive si implicarea companiilor."
           }
         ],
+        bank: {
+          title: "Transfer bancar",
+          intro:
+            "Pentru donatii prin transfer bancar, foloseste datele de mai jos exact asa cum sunt afisate.",
+          holderLabel: "Titular cont",
+          ibanLabel: "IBAN",
+          bicLabel: "BIC/SWIFT",
+          holder: "KIDS KICKING CANCER with BUDO",
+          iban: "RO83 RNCB 0082 1852 9530 0001",
+          bic: "RNCBROBU"
+        },
         actions: [
           { href: "/blog", label: "Vezi idei de campanii", variant: "secondary" },
           { href: "/contact", label: "Datele organizatiei", variant: "ghost" }
@@ -475,14 +496,14 @@ export const siteContent: Record<Locale, SiteDictionary> = {
   },
   en: {
     meta: {
-      title: "Kids Kicking Cancer with Budo Romania",
+      title: "Kids Kicking Cancer with Budo",
       description:
-        "Bilingual website of Kids Kicking Cancer with Budo Romania: Budo-based support for children in treatment, hospital volunteering, research, and fundraising."
+        "Bilingual website of Kids Kicking Cancer with Budo, the Bucharest chapter: Budo-based support for children in treatment, hospital volunteering, research, and fundraising."
     },
     brand: {
       name: "Kids Kicking Cancer with Budo",
-      chapter: "Romania",
-      tagline: "Courage, breath, and purpose in the middle of treatment."
+      chapter: "Bucharest chapter",
+      tagline: "Power Peace Purpose"
     },
     nav: [
       { href: "/about", label: "About" },
@@ -496,7 +517,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "The Romanian chapter of the Kids Kicking Cancer movement",
       title: "We turn treatment moments into moments of courage.",
       lede:
-        "KKCB Romania works with children in treatment through breathing, posture, and focus exercises inspired by Budo, adapted to medical settings and supported by trained volunteers.",
+        "The Bucharest chapter works with children in treatment through breathing, posture, and focus exercises inspired by Budo, adapted to medical settings and supported by trained volunteers.",
       primaryAction: {
         href: "/get-involved",
         label: "Join as a volunteer",
@@ -520,7 +541,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Local identity",
       title: "The Romanian chapter brings an international method into a clear local framework.",
       body:
-        "KKCB Romania is part of the international Kids Kicking Cancer movement and works to bring the Budo method into hospitals together with volunteers, families, and institutional partners.",
+        "The Bucharest chapter is part of the international Kids Kicking Cancer movement and works to bring the Budo method into hospitals together with volunteers, families, and institutional partners.",
       facts: [
         "Operating chapter based in Bucharest, Sector 3",
         "Authorized in 2025",
@@ -613,7 +634,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Program archive",
       title: "Archive images show a program with history and documented activity.",
       intro:
-        "The photographs show bedside work, training moments, and direct links to the wider international community behind KKCB Romania.",
+        "The photographs show bedside work, training moments, and direct links to the wider international Kids Kicking Cancer community.",
       imageIds: [
         "thumbs-up-bedside",
         "team-with-student",
@@ -637,7 +658,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       eyebrow: "Get involved",
       title: "Help us carry this work further in Romania.",
       body:
-        "KKCB Romania is looking for volunteers, partners, and supporters who can sustain bedside work and help prepare research and development projects.",
+        "The Bucharest chapter is looking for volunteers, partners, and supporters who can sustain bedside work and help prepare research and development projects.",
       actions: [
         { href: "/get-involved", label: "I want to help", variant: "primary" },
         { href: "/contact", label: "Legal details and address", variant: "secondary" }
@@ -695,7 +716,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       research: {
         title: "Research, grants, and European visibility",
         lede:
-          "KKCB Romania is looking for hospitals, universities, and funders who can evaluate the method through pilot projects and European grants.",
+          "The Bucharest chapter is looking for hospitals, universities, and funders who can evaluate the method through pilot projects and European grants.",
         referenceLinkLabel: "Open reference",
         focus: [
           {
@@ -732,7 +753,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       getInvolved: {
         title: "Get involved",
         lede:
-          "KKCB Romania needs people and institutions that can support both the hospital work and the organization's development.",
+          "The Bucharest chapter needs people and institutions that can support both the hospital work and the organization's development.",
         cards: [
           {
             title: "Volunteering",
@@ -747,6 +768,17 @@ export const siteContent: Record<Locale, SiteDictionary> = {
             body: "For local campaigns, school events, sports initiatives, and company-led support."
           }
         ],
+        bank: {
+          title: "Bank transfer",
+          intro:
+            "For donations by bank transfer, use the details below exactly as shown.",
+          holderLabel: "Account holder",
+          ibanLabel: "IBAN",
+          bicLabel: "BIC/SWIFT",
+          holder: "KIDS KICKING CANCER with BUDO",
+          iban: "RO83 RNCB 0082 1852 9530 0001",
+          bic: "RNCBROBU"
+        },
         actions: [
           { href: "/blog", label: "See campaign ideas", variant: "secondary" },
           { href: "/contact", label: "Organization details", variant: "ghost" }

@@ -25,6 +25,11 @@
     "reason": "Promotional children imagery with uncovered faces and unclear reuse rights."
   },
   {
+    "source": "assets/originals/brand/kids-kicking-cancer-with-budo-logo-original.jpg",
+    "status": "approved",
+    "reason": "Official logo source without patient imagery; cropped and lightly cleaned for web use."
+  },
+  {
     "source": "assets/originals/program/balloon-pad-strike-original.jpg",
     "status": "approved",
     "reason": "Patient mask is clearly visible."

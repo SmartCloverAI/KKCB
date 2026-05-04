@@ -2,7 +2,7 @@
 title: "Voluntariat la patul copilului: ce inseamna prezenta potrivita"
 excerpt: Cum arata o interventie cu Budo in spital si de ce continuitatea conteaza mai mult decat gestul spectaculos.
 publishedAt: 2026-04-21
-author: Echipa KKCB Romania
+author: Echipa Kids Kicking Cancer with Budo
 coverId: thumbs-up-bedside
 ---
 

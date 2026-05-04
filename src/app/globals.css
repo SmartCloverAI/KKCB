@@ -100,8 +100,9 @@ h4 {
 
 .brandmark {
   display: flex;
-  flex-direction: column;
-  gap: 0.12rem;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
 }
 
 .brandmark--header {
@@ -109,11 +110,27 @@ h4 {
   min-width: 0;
 }
 
+.brandmark__logo {
+  width: 2.85rem;
+  height: 2.85rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  object-fit: contain;
+}
+
+.brandmark__text {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
 .brandmark__label {
   font-family: var(--font-display), sans-serif;
   font-size: 0.86rem;
   font-weight: 700;
   letter-spacing: 0.08em;
+  line-height: 1.15;
   text-transform: uppercase;
 }
 
@@ -367,6 +384,7 @@ h4 {
 .media-card,
 .blog-card,
 .reference-card,
+.bank-card,
 .post-cover,
 .timeline__item {
   background: var(--surface);
@@ -518,8 +536,60 @@ h4 {
 }
 
 .reference-card,
+.bank-card,
 .timeline__item {
   padding: 1.25rem;
+}
+
+.bank-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 1.25rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.bank-card__intro {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.bank-card__intro p {
+  margin: 0;
+}
+
+.bank-details {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.bank-details div {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 251, 244, 0.58);
+}
+
+.bank-details dt {
+  color: var(--muted);
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bank-details dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--text);
+  font-family: var(--font-display), sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
 }
 
 .chapter-strip {
@@ -668,6 +738,28 @@ h4 {
   gap: 1rem;
 }
 
+.site-footer__intro,
+.site-footer__details,
+.site-footer__details > div {
+  min-width: 0;
+}
+
+.site-footer__logo {
+  width: min(20rem, 100%);
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 18px;
+  object-fit: contain;
+}
+
+.site-footer__tagline {
+  margin: 0 0 0.7rem;
+  color: var(--green);
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.96rem;
+  font-weight: 700;
+}
+
 .site-footer__version {
   display: flex;
   gap: 0.55rem;
@@ -687,7 +779,7 @@ h4 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: max-content;
+  width: fit-content;
   max-width: 100%;
   margin-top: 1rem;
   overflow-x: auto;
@@ -757,6 +849,7 @@ h4 {
 }
 
 .reference-grid .reference-card,
+.bank-card,
 .blog-grid .blog-card,
 .archive-grid .media-card,
 .timeline__item {
@@ -793,6 +886,7 @@ h4 {
   .hero,
   .section--split,
   .section-intro,
+  .bank-card,
   .final-cta,
   .site-footer {
     grid-template-columns: 1fr;
@@ -920,6 +1014,7 @@ h4 {
   .media-card,
   .blog-card,
   .reference-card,
+  .bank-card,
   .timeline__item,
   .final-cta {
     border-radius: 20px;
@@ -957,6 +1052,15 @@ h4 {
   .page-hero__inner {
     width: min(calc(100% - 1.25rem), 100%);
     padding-top: 0.1rem;
+  }
+
+  .brandmark {
+    gap: 0.58rem;
+  }
+
+  .brandmark__logo {
+    width: 2.55rem;
+    height: 2.55rem;
   }
 
   .brandmark__label {

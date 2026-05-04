@@ -13,6 +13,7 @@ export default async function GetInvolvedPage({
   const locale = ensureLocale(rawLocale);
   const dictionary = getDictionary(locale);
   const page = dictionary.pages.getInvolved;
+  const bank = page.bank;
 
   return (
     <main className="inner-page">
@@ -26,6 +27,28 @@ export default async function GetInvolvedPage({
             </article>
           ))}
         </div>
+        <article className="bank-card" aria-labelledby="bank-transfer-title">
+          <div className="bank-card__intro">
+            <p className="eyebrow" id="bank-transfer-title">
+              {bank.title}
+            </p>
+            <p>{bank.intro}</p>
+          </div>
+          <dl className="bank-details">
+            <div>
+              <dt>{bank.holderLabel}</dt>
+              <dd>{bank.holder}</dd>
+            </div>
+            <div>
+              <dt>{bank.ibanLabel}</dt>
+              <dd>{bank.iban}</dd>
+            </div>
+            <div>
+              <dt>{bank.bicLabel}</dt>
+              <dd>{bank.bic}</dd>
+            </div>
+          </dl>
+        </article>
         <div className="button-row button-row--spaced">
           {page.actions.map((action) => (
             <Link

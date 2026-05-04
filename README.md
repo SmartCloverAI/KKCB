@@ -1,6 +1,6 @@
 # KKCB
 
-Public website for `Kids Kicking Cancer with Budo Romania`.
+Public website for `Kids Kicking Cancer with Budo`, the Bucharest-based Romanian chapter.
 
 ## Development
 
@@ -40,6 +40,7 @@ npm run start
 - Any repository modification must include a version bump in `package.json`.
 - Keep `package-lock.json` in sync with the bumped package version.
 - Run `npm run version:check` directly if you want to verify the rule without running the full test suite.
+- Completed change sets must be committed, pushed, allowed to auto-update online, and verified on the online deployment before handoff.
 
 ## Content structure
 

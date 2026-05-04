@@ -1,6 +1,6 @@
 # Competitive landscape
 
-This note captures the official initiatives used as inspiration for the first KKCB Romania website direction.
+This note captures the official initiatives used as inspiration for the first Kids Kicking Cancer with Budo website direction.
 
 ## 1. MATIO / formerly Kids Kicking Cancer
 
@@ -45,7 +45,7 @@ Takeaways:
 - Strong local credibility comes from specificity: where the work happens, what it changes, and what support enables.
 - The site should make it easy to connect donations to real program layers.
 
-## Implications for KKCB Romania
+## Implications for the Bucharest Chapter
 
 - The homepage should revolve around three tracks: bedside volunteering, research, fundraising.
 - The blog should do strategic work: onboarding, evidence translation, and campaign storytelling.

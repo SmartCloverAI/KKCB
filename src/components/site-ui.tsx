@@ -51,6 +51,15 @@ export function SiteFooter({ dictionary, versionLabel }: FooterProps) {
   return (
     <footer className="site-footer">
       <div className="site-footer__intro">
+        <Image
+          alt={`${dictionary.brand.name} logo`}
+          className="site-footer__logo"
+          height={130}
+          loading="eager"
+          src="/media/kids-kicking-cancer-with-budo-logo.webp"
+          width={320}
+        />
+        <p className="site-footer__tagline">{dictionary.brand.tagline}</p>
         <p className="eyebrow">{dictionary.brand.name}</p>
         <p>{dictionary.footer.mission}</p>
         <p className="site-footer__version">
@@ -97,7 +106,7 @@ export function PageHero({ title, lede }: PageHeroProps) {
   return (
     <section className="page-hero">
       <div className="page-hero__inner">
-        <p className="eyebrow">Kids Kicking Cancer with Budo Romania</p>
+        <p className="eyebrow">Kids Kicking Cancer with Budo</p>
         <div className="page-hero__content">
           <h1>{title}</h1>
           <p>{lede}</p>

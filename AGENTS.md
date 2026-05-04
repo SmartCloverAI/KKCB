@@ -1,6 +1,6 @@
 # KKCB Agent Guide
 
-This repository hosts the public website for `Kids Kicking Cancer with Budo Romania`.
+This repository hosts the public website for `Kids Kicking Cancer with Budo`, the Bucharest-based Romanian chapter.
 
 ## Primary goals
 
@@ -57,4 +57,5 @@ This repository hosts the public website for `Kids Kicking Cancer with Budo Roma
 - Treat the research page as an agenda and partnership invitation, not as proof beyond available evidence.
 - `_raw/` must stay empty in the committed repo state except for `.gitkeep`.
 - Every repository change set must include a version bump in `package.json`, with `package-lock.json` kept in sync.
+- Every completed change set must be committed and pushed, then the online worker/deployment must be allowed to auto-update to the latest commit and the online version must be tested before handoff.
 - Only originals marked approved in `content/media-review.json` may appear in `content/media-manifest.json` or `public/media/`.

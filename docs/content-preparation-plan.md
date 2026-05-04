@@ -6,7 +6,7 @@ Date reviewed: `2026-04-22`
 
 Replace abstract, impersonal, and self-referential website copy with direct public-facing language that states:
 
-- who KKCB Romania is
+- who Kids Kicking Cancer with Budo is locally
 - what the organization does
 - who it serves
 - how the Budo method is used
@@ -14,7 +14,7 @@ Replace abstract, impersonal, and self-referential website copy with direct publ
 
 ## Tone Rules
 
-- Use direct subjects: `KKCB Romania`, `organizatia`, `voluntarii`, `copiii`, `familiile`, `partenerii`.
+- Use direct subjects: `Kids Kicking Cancer with Budo`, `capitolul din Bucuresti`, `organizatia`, `voluntarii`, `copiii`, `familiile`, `partenerii`.
 - Prefer concrete verbs over abstract framing: `lucreaza`, `sprijina`, `formeaza`, `cauta`, `sustine`, `documenteaza`.
 - State current reality before future ambition.
 - Avoid sentences about the website itself unless the sentence is literally about navigation or legal publishing.
@@ -26,7 +26,7 @@ Replace abstract, impersonal, and self-referential website copy with direct publ
 
 ### Homepage
 
-- State clearly that KKCB Romania brings Budo-based emotional regulation and bedside support to children in treatment.
+- State clearly that the Bucharest chapter brings Budo-based emotional regulation and bedside support to children in treatment.
 - Name the three operating directions in concrete terms: hospital volunteering, research, fundraising.
 - Explain support in terms of people and work, not website architecture.
 

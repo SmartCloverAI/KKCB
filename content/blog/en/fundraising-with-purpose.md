@@ -2,7 +2,7 @@
 title: "Fundraising with purpose: raising money without losing the human center"
 excerpt: Donations need to be tied clearly to outcomes, processes, and credible stories instead of vague emotional pressure.
 publishedAt: 2026-04-12
-author: KKCB Romania Team
+author: Kids Kicking Cancer with Budo Team
 coverId: balloon-prep-bedside
 ---
 
@@ -23,7 +23,7 @@ Responsible fundraising makes the relationship between donation and concrete act
 - a family experiences support and coherence
 - the organization can sustain activity, training, and responsible documentation
 
-## Campaign ideas that fit KKCB Romania
+## Campaign ideas that fit Kids Kicking Cancer with Budo
 
 - birthday campaigns
 - sports or Budo challenges
