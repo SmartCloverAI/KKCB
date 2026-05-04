@@ -91,6 +91,12 @@ export type SiteDictionary = {
     body: string;
     actions: ActionLink[];
   };
+  innerCta: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    action: ActionLink;
+  };
   pages: {
     about: {
       title: string;
@@ -139,6 +145,8 @@ export type SiteDictionary = {
         holderLabel: string;
         ibanLabel: string;
         bicLabel: string;
+        copyLabel: string;
+        copiedLabel: string;
         holder: string;
         iban: string;
         bic: string;
@@ -188,7 +196,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       { href: "/contact", label: "Contact" }
     ],
     hero: {
-      eyebrow: "Capitolul romanesc al miscarii Kids Kicking Cancer",
+      eyebrow: "Capitolul din Bucuresti al miscarii Kids Kicking Cancer",
       title: "Transformam momentele de tratament in momente de curaj.",
       lede:
         "Capitolul din Bucuresti lucreaza cu copii aflati in tratament prin exercitii de respiratie, postura si concentrare inspirate din Budo, adaptate mediului medical si sustinute de voluntari pregatiti.",
@@ -213,7 +221,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     },
     chapter: {
       eyebrow: "Identitate locala",
-      title: "Capitolul din Romania aduce local o metoda cu istorie internationala.",
+      title: "Capitolul din Bucuresti aduce local o metoda cu istorie internationala.",
       body:
         "Capitolul din Bucuresti face parte din miscarea internationala Kids Kicking Cancer si lucreaza pentru a aduce metoda Budo in spitale, impreuna cu voluntari, familii si parteneri institutionali.",
       facts: [
@@ -338,14 +346,25 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         { href: "/contact", label: "Date legale si adresa", variant: "secondary" }
       ]
     },
+    innerCta: {
+      eyebrow: "Implica-te cu masura",
+      title: "Sustine prezenta in spitale.",
+      body:
+        "Daca poti ajuta prin timp, parteneriate sau sprijin financiar, pagina de implicare explica pasii concreti si datele utile.",
+      action: {
+        href: "/get-involved",
+        label: "Vezi cum te implici",
+        variant: "primary"
+      }
+    },
     pages: {
       about: {
-        title: "Despre capitolul din Romania",
+        title: "Despre capitolul din Bucuresti",
         lede:
-          "Capitolul din Romania porneste din istoria internationala a miscarii si din experienta deja documentata in imagini si activitati publice.",
+          "Capitolul din Bucuresti porneste din istoria internationala a miscarii si din experienta deja documentata in imagini si activitati publice.",
         storyTitle: "De la mostenirea internationala la un capitol local solid",
         storyBody: [
-          "Arhiva arata interventii la patul copilului, intalniri internationale si aparitii publice care leaga direct capitolul din Romania de istoria mai larga a programului.",
+          "Arhiva arata interventii la patul copilului, intalniri internationale si aparitii publice care leaga direct capitolul din Bucuresti de istoria mai larga a programului.",
           "Obiectivul local este limpede: o organizatie care lucreaza responsabil in spitale, formeaza voluntari si construieste parteneriate pentru cercetare si finantare."
         ],
         milestones: [
@@ -449,6 +468,8 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           holderLabel: "Titular cont",
           ibanLabel: "IBAN",
           bicLabel: "BIC/SWIFT",
+          copyLabel: "Copiaza",
+          copiedLabel: "Copiat",
           holder: "KIDS KICKING CANCER with BUDO",
           iban: "RO83 RNCB 0082 1852 9530 0001",
           bic: "RNCBROBU"
@@ -514,7 +535,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       { href: "/contact", label: "Contact" }
     ],
     hero: {
-      eyebrow: "The Romanian chapter of the Kids Kicking Cancer movement",
+      eyebrow: "The Bucharest chapter of the Kids Kicking Cancer movement",
       title: "We turn treatment moments into moments of courage.",
       lede:
         "The Bucharest chapter works with children in treatment through breathing, posture, and focus exercises inspired by Budo, adapted to medical settings and supported by trained volunteers.",
@@ -539,7 +560,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     },
     chapter: {
       eyebrow: "Local identity",
-      title: "The Romanian chapter brings an international method into a clear local framework.",
+      title: "The Bucharest chapter brings an international method into a clear local framework.",
       body:
         "The Bucharest chapter is part of the international Kids Kicking Cancer movement and works to bring the Budo method into hospitals together with volunteers, families, and institutional partners.",
       facts: [
@@ -664,14 +685,25 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         { href: "/contact", label: "Legal details and address", variant: "secondary" }
       ]
     },
+    innerCta: {
+      eyebrow: "Get involved",
+      title: "Support the hospital work.",
+      body:
+        "If you can help with time, partnerships, or financial support, the involvement page explains the concrete next steps and useful details.",
+      action: {
+        href: "/get-involved",
+        label: "See how to help",
+        variant: "primary"
+      }
+    },
     pages: {
       about: {
-        title: "About the Romanian chapter",
+        title: "About the Bucharest chapter",
         lede:
-          "The Romanian chapter begins from the movement's international history and from work already documented in images and public activity.",
+          "The Bucharest chapter begins from the movement's international history and from work already documented in images and public activity.",
         storyTitle: "From international legacy to a credible local chapter",
         storyBody: [
-          "The archive shows bedside interventions, international meetings, and public appearances that link the Romanian chapter directly to the wider history of the program.",
+          "The archive shows bedside interventions, international meetings, and public appearances that link the Bucharest chapter directly to the wider history of the program.",
           "The local objective is clear: an organization that works responsibly in hospitals, trains volunteers, and builds partnerships for research and funding."
         ],
         milestones: [
@@ -775,6 +807,8 @@ export const siteContent: Record<Locale, SiteDictionary> = {
           holderLabel: "Account holder",
           ibanLabel: "IBAN",
           bicLabel: "BIC/SWIFT",
+          copyLabel: "Copy",
+          copiedLabel: "Copied",
           holder: "KIDS KICKING CANCER with BUDO",
           iban: "RO83 RNCB 0082 1852 9530 0001",
           bic: "RNCBROBU"

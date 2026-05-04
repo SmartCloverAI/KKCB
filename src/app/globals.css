@@ -111,8 +111,8 @@ h4 {
 }
 
 .brandmark__logo {
-  width: 2.85rem;
-  height: 2.85rem;
+  width: 3.5rem;
+  height: 3.5rem;
   flex: 0 0 auto;
   border-radius: 999px;
   object-fit: contain;
@@ -564,16 +564,25 @@ h4 {
   margin: 0;
 }
 
-.bank-details div {
+.bank-details__row {
   display: grid;
-  gap: 0.2rem;
-  padding: 0.7rem 0.85rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.2rem 0.75rem;
+  align-items: center;
+  padding: 0.75rem 0.85rem;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: rgba(255, 251, 244, 0.58);
 }
 
+.bank-details__row--primary {
+  padding: 0.95rem;
+  border-color: rgba(23, 57, 47, 0.24);
+  background: rgba(255, 251, 244, 0.78);
+}
+
 .bank-details dt {
+  grid-column: 1 / 2;
   color: var(--muted);
   font-family: var(--font-display), sans-serif;
   font-size: 0.78rem;
@@ -583,6 +592,7 @@ h4 {
 }
 
 .bank-details dd {
+  grid-column: 1 / 2;
   margin: 0;
   overflow-wrap: anywhere;
   color: var(--text);
@@ -590,6 +600,36 @@ h4 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.45;
+}
+
+.bank-details__row--primary dd {
+  font-size: 1.1rem;
+}
+
+.bank-details__copy {
+  grid-column: 2 / 3;
+  grid-row: 1 / span 2;
+  align-self: center;
+  min-height: 2.65rem;
+  padding: 0.62rem 0.8rem;
+  border: 1px solid rgba(20, 37, 31, 0.14);
+  border-radius: 999px;
+  background: rgba(23, 57, 47, 0.06);
+  color: var(--green);
+  cursor: pointer;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.bank-details__copy:hover {
+  border-color: rgba(20, 37, 31, 0.28);
+  background: rgba(23, 57, 47, 0.1);
+  transform: translateY(-1px);
 }
 
 .chapter-strip {
@@ -724,6 +764,32 @@ h4 {
   box-shadow: var(--shadow);
 }
 
+.inner-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 1.5rem;
+  align-items: center;
+  width: min(calc(100% - 2rem), var(--max));
+  margin: 0 auto 3rem;
+  padding: 1.55rem 1.65rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 250, 242, 0.34);
+}
+
+.inner-cta h2 {
+  font-size: clamp(1.65rem, 2.8vw, 2.45rem);
+  line-height: 1;
+}
+
+.inner-cta p {
+  margin-top: 0;
+}
+
+.inner-cta .button {
+  margin-top: 0.35rem;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
@@ -745,7 +811,7 @@ h4 {
 }
 
 .site-footer__logo {
-  width: min(20rem, 100%);
+  width: min(26rem, 100%);
   height: auto;
   margin-bottom: 1rem;
   border-radius: 18px;
@@ -887,6 +953,7 @@ h4 {
   .section--split,
   .section-intro,
   .bank-card,
+  .inner-cta,
   .final-cta,
   .site-footer {
     grid-template-columns: 1fr;
@@ -990,6 +1057,7 @@ h4 {
 
   .hero,
   .section,
+  .inner-cta,
   .final-cta,
   .page-hero,
   .post-shell {
@@ -1059,8 +1127,8 @@ h4 {
   }
 
   .brandmark__logo {
-    width: 2.55rem;
-    height: 2.55rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   .brandmark__label {
@@ -1099,6 +1167,23 @@ h4 {
   .section-intro {
     gap: 0.85rem;
     margin-bottom: 1rem;
+  }
+
+  .bank-details__row {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-details__copy {
+    grid-column: 1 / 2;
+    grid-row: auto;
+    justify-self: start;
+    margin-top: 0.3rem;
+  }
+
+  .inner-cta {
+    gap: 0.7rem;
+    margin-bottom: 2.2rem;
+    padding: 1.2rem 0;
   }
 
   .archive-grid .media-card__image,

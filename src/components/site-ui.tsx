@@ -30,6 +30,11 @@ type PageHeroProps = {
   lede: string;
 };
 
+type InnerCtaProps = {
+  locale: Locale;
+  dictionary: SiteDictionary;
+};
+
 type ActionButtonsProps = {
   locale: Locale;
   actions: ActionLink[];
@@ -54,10 +59,10 @@ export function SiteFooter({ dictionary, versionLabel }: FooterProps) {
         <Image
           alt={`${dictionary.brand.name} logo`}
           className="site-footer__logo"
-          height={130}
+          height={171}
           loading="eager"
           src="/media/kids-kicking-cancer-with-budo-logo.webp"
-          width={320}
+          width={429}
         />
         <p className="site-footer__tagline">{dictionary.brand.tagline}</p>
         <p className="eyebrow">{dictionary.brand.name}</p>
@@ -132,6 +137,28 @@ export function ActionButtons({ locale, actions }: ActionButtonsProps) {
   );
 }
 
+export function InnerCta({ locale, dictionary }: InnerCtaProps) {
+  const cta = dictionary.innerCta;
+
+  return (
+    <section className="inner-cta">
+      <div>
+        <p className="eyebrow">{cta.eyebrow}</p>
+        <h2>{cta.title}</h2>
+      </div>
+      <div>
+        <p>{cta.body}</p>
+        <Link
+          className={`button button--${cta.action.variant ?? "primary"}`}
+          href={withLocale(locale, cta.action.href)}
+        >
+          {cta.action.label}
+        </Link>
+      </div>
+    </section>
+  );
+}
+
 export function MediaCard({
   id,
   locale,
@@ -149,6 +176,7 @@ export function MediaCard({
         <Image
           alt={image.localizedAlt}
           fill
+          loading="eager"
           sizes="(max-width: 900px) 100vw, 50vw"
           src={image.src}
         />
@@ -168,6 +196,7 @@ export function BlogCard({ locale, post }: BlogCardProps) {
           <Image
             alt={cover.localizedAlt}
             fill
+            loading="eager"
             sizes="(max-width: 900px) 100vw, 33vw"
             src={cover.src}
           />

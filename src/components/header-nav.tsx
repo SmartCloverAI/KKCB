@@ -89,9 +89,9 @@ export function HeaderNavigation({ locale, dictionary }: HeaderNavigationProps) 
         <Image
           alt=""
           className="brandmark__logo"
-          height={46}
+          height={56}
           src="/media/kids-kicking-cancer-with-budo-mark.webp"
-          width={46}
+          width={56}
         />
         <span className="brandmark__text">
           <span className="brandmark__label">{dictionary.brand.name}</span>

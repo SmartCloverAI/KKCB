@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { BankDetails } from "@/components/bank-details";
 import { PageHero } from "@/components/site-ui";
 import { getDictionary } from "@/content/site";
 import { ensureLocale, withLocale } from "@/lib/site-utils";
@@ -34,20 +35,7 @@ export default async function GetInvolvedPage({
             </p>
             <p>{bank.intro}</p>
           </div>
-          <dl className="bank-details">
-            <div>
-              <dt>{bank.holderLabel}</dt>
-              <dd>{bank.holder}</dd>
-            </div>
-            <div>
-              <dt>{bank.ibanLabel}</dt>
-              <dd>{bank.iban}</dd>
-            </div>
-            <div>
-              <dt>{bank.bicLabel}</dt>
-              <dd>{bank.bic}</dd>
-            </div>
-          </dl>
+          <BankDetails bank={bank} />
         </article>
         <div className="button-row button-row--spaced">
           {page.actions.map((action) => (

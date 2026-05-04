@@ -1,4 +1,4 @@
-import { MediaCard, PageHero } from "@/components/site-ui";
+import { InnerCta, MediaCard, PageHero } from "@/components/site-ui";
 import { getDictionary } from "@/content/site";
 import { ensureLocale } from "@/lib/site-utils";
 
@@ -35,6 +35,7 @@ export default async function AboutPage({
           ))}
         </div>
       </section>
+      <InnerCta dictionary={dictionary} locale={locale} />
     </main>
   );
 }
