@@ -35,7 +35,7 @@ export function withLocale(locale: Locale, href: string) {
 }
 
 export function getCanonicalUrl(locale: Locale, href = "") {
-  return `https://kkcb.org/${locale}${href}`;
+  return `https://kkc-romania.org/${locale}${href}`;
 }
 
 export function getDefaultLocale() {

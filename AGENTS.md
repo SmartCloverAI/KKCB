@@ -57,5 +57,6 @@ This repository hosts the public website for `Kids Kicking Cancer with Budo`, th
 - Treat the research page as an agenda and partnership invitation, not as proof beyond available evidence.
 - `_raw/` must stay empty in the committed repo state except for `.gitkeep`.
 - Every repository change set must include a version bump in `package.json`, with `package-lock.json` kept in sync.
+- The real public page/deployment URL for online handoff testing is `https://kkc-romania.org`; do not use `https://kkcb.org` for deployment verification.
 - Every completed change set must be committed and pushed, then the online worker/deployment must be allowed to auto-update to the latest commit and the online version must be tested before handoff.
 - Only originals marked approved in `content/media-review.json` may appear in `content/media-manifest.json` or `public/media/`.
