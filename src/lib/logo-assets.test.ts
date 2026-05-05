@@ -86,7 +86,7 @@ describe("footer logo asset", () => {
       "utf8"
     );
     const sourceMatch = footerSource.match(
-      /src="(?<source>\/media\/kids-kicking-cancer-with-budo-logo-v2\.webp)"/
+      /src="(?<source>\/media\/kids-kicking-cancer-with-budo-logo-v3\.webp)"/
     );
 
     expect(sourceMatch?.groups?.source).toBeDefined();

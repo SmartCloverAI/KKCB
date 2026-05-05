@@ -62,7 +62,7 @@ export function SiteFooter({ dictionary, versionLabel }: FooterProps) {
           className="site-footer__logo"
           height={171}
           loading="eager"
-          src="/media/kids-kicking-cancer-with-budo-logo-v2.webp"
+          src="/media/kids-kicking-cancer-with-budo-logo-v3.webp"
           width={429}
         />
         <p className="site-footer__tagline">{dictionary.brand.tagline}</p>
