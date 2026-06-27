@@ -569,6 +569,40 @@ h4 {
   padding: 1.25rem;
 }
 
+.document-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.document-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  letter-spacing: 0.14em;
+}
+
+.document-card__meta span {
+  white-space: nowrap;
+}
+
+.document-card p:not(.eyebrow) {
+  margin-bottom: 1rem;
+}
+
+.document-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: auto;
+}
+
+.document-card__action {
+  min-height: 2.75rem;
+  white-space: normal;
+}
+
 .bank-card {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);

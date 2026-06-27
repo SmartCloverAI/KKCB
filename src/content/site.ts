@@ -14,11 +14,16 @@ export type ActionLink = {
 export type DocumentDownload = {
   title: string;
   description: string;
-  href: string;
-  fileType: "PDF";
+  href?: string;
+  fileType: "PDF" | "PDF + DOCX";
   language: string;
   date: string;
-  downloadLabel: string;
+  downloadLabel?: string;
+  downloads?: Array<{
+    href: string;
+    label: string;
+    fileType: "PDF" | "DOCX";
+  }>;
 };
 
 export type SiteDictionary = {
@@ -506,12 +511,22 @@ export const siteContent: Record<Locale, SiteDictionary> = {
             {
               title: "Cerere voluntar / membru",
               description:
-                "Formular blank în limba română pentru solicitarea admiterii ca voluntar și/sau membru.",
-              href: "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.pdf",
-              fileType: "PDF",
+                "Formular blank în limba română. Descarcă DOCX pentru completare digitală sau PDF pentru imprimare.",
+              fileType: "PDF + DOCX",
               language: "română",
               date: "16 mai 2026",
-              downloadLabel: "Descarcă PDF"
+              downloads: [
+                {
+                  href: "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.pdf",
+                  label: "Descarcă PDF",
+                  fileType: "PDF"
+                },
+                {
+                  href: "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.docx",
+                  label: "Descarcă DOCX editabil",
+                  fileType: "DOCX"
+                }
+              ]
             }
           ]
         },
@@ -895,12 +910,22 @@ export const siteContent: Record<Locale, SiteDictionary> = {
             {
               title: "Volunteer / member application",
               description:
-                "Official blank form in Romanian for applying as a volunteer and/or member.",
-              href: "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.pdf",
-              fileType: "PDF",
+                "Romanian blank form. Use DOCX for digital completion or PDF for printing.",
+              fileType: "PDF + DOCX",
               language: "Romanian",
               date: "16 May 2026",
-              downloadLabel: "Download PDF"
+              downloads: [
+                {
+                  href: "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.pdf",
+                  label: "Download PDF",
+                  fileType: "PDF"
+                },
+                {
+                  href: "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.docx",
+                  label: "Download editable DOCX",
+                  fileType: "DOCX"
+                }
+              ]
             }
           ]
         },

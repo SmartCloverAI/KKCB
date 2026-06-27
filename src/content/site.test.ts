@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 
@@ -7,15 +8,21 @@ import type { SiteDictionary } from "@/content/site";
 
 const ethicsHref = "/documents/codul-de-etica-kkcb-ro-2026-05-16.pdf";
 const applicationHref = "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.pdf";
+const applicationDocxHref = "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.docx";
 
 type ExpectedDocument = {
   title: string;
   description: string;
-  href: string;
+  href?: string;
   fileType: string;
   language: string;
   date: string;
-  downloadLabel: string;
+  downloadLabel?: string;
+  downloads?: Array<{
+    href: string;
+    label: string;
+    fileType: string;
+  }>;
 };
 
 type DocumentSection = {
@@ -38,6 +45,12 @@ type BankTrustContent = SiteDictionary["pages"]["getInvolved"]["bank"] & {
 
 function documentPath(href: string) {
   return path.join(process.cwd(), "public", href.replace(/^\//, ""));
+}
+
+function readDocxEntry(filePath: string, entryPath: string) {
+  return execFileSync("unzip", ["-p", filePath, entryPath], {
+    encoding: "utf8"
+  });
 }
 
 describe("site content governance", () => {
@@ -100,19 +113,27 @@ describe("site content governance", () => {
     }
   });
 
-  it("publishes scrubbed public PDF documents without named author metadata", () => {
+  it("publishes scrubbed public PDF and DOCX documents without named author metadata", () => {
     const ethicsPath = documentPath(ethicsHref);
     const applicationPath = documentPath(applicationHref);
+    const applicationDocxPath = documentPath(applicationDocxHref);
 
     expect(existsSync(ethicsPath)).toBe(true);
     expect(existsSync(applicationPath)).toBe(true);
+    expect(existsSync(applicationDocxPath)).toBe(true);
 
     const ethicsBytes = readFileSync(ethicsPath, "latin1");
     const applicationBytes = readFileSync(applicationPath, "latin1");
+    const applicationDocxCore = readDocxEntry(applicationDocxPath, "docProps/core.xml");
+    const applicationDocxApp = readDocxEntry(applicationDocxPath, "docProps/app.xml");
 
     expect(ethicsBytes).not.toContain("Nicola Bucataru");
     expect(ethicsBytes).not.toContain("Microsoft® Word 2016");
     expect(applicationBytes).not.toContain("Nicola Bucataru");
+    expect(applicationDocxCore).not.toContain("Nicola Bucataru");
+    expect(applicationDocxCore).not.toContain("Microsoft® Word");
+    expect(applicationDocxApp).not.toContain("Nicola Bucataru");
+    expect(applicationDocxApp).not.toContain("Microsoft® Word");
   });
 
   it("adds bilingual document metadata for contact and involvement pages", () => {
@@ -133,11 +154,19 @@ describe("site content governance", () => {
     expect(enContact.governance?.items.map((item) => item.href)).toEqual([ethicsHref]);
     expect(roInvolved.documents?.items.map((item) => item.href)).toEqual([
       ethicsHref,
-      applicationHref
+      undefined
     ]);
     expect(enInvolved.documents?.items.map((item) => item.href)).toEqual([
       ethicsHref,
-      applicationHref
+      undefined
+    ]);
+    expect(roInvolved.documents?.items[1].downloads?.map((item) => item.href)).toEqual([
+      applicationHref,
+      applicationDocxHref
+    ]);
+    expect(enInvolved.documents?.items[1].downloads?.map((item) => item.href)).toEqual([
+      applicationHref,
+      applicationDocxHref
     ]);
 
     expect(roInvolved.documents?.items[0]).toMatchObject({
@@ -152,6 +181,40 @@ describe("site content governance", () => {
       date: "16 May 2026",
       downloadLabel: "Download PDF"
     });
+    expect(roInvolved.documents?.items[1]).toMatchObject({
+      fileType: "PDF + DOCX",
+      language: "română",
+      date: "16 mai 2026"
+    });
+    expect(enInvolved.documents?.items[1]).toMatchObject({
+      fileType: "PDF + DOCX",
+      language: "Romanian",
+      date: "16 May 2026"
+    });
+    expect(roInvolved.documents?.items[1].downloads).toEqual([
+      {
+        href: applicationHref,
+        label: "Descarcă PDF",
+        fileType: "PDF"
+      },
+      {
+        href: applicationDocxHref,
+        label: "Descarcă DOCX editabil",
+        fileType: "DOCX"
+      }
+    ]);
+    expect(enInvolved.documents?.items[1].downloads).toEqual([
+      {
+        href: applicationHref,
+        label: "Download PDF",
+        fileType: "PDF"
+      },
+      {
+        href: applicationDocxHref,
+        label: "Download editable DOCX",
+        fileType: "DOCX"
+      }
+    ]);
     expect(enInvolved.documents?.items.every((item) => item.description.includes("Romanian"))).toBe(
       true
     );
