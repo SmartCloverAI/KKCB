@@ -10,8 +10,8 @@ describe("BankDetails", () => {
     const html = renderToStaticMarkup(<BankDetails bank={siteContent.ro.pages.getInvolved.bank} />);
 
     expect(html).toContain("bank-details__row--primary");
-    expect(html).toContain("Copiaza IBAN");
-    expect(html).toContain("Copiaza Titular cont");
-    expect(html).toContain("Copiaza BIC/SWIFT");
+    expect(html).toContain("Copiază IBAN");
+    expect(html).toContain("Copiază Titular cont");
+    expect(html).toContain("Copiază BIC/SWIFT");
   });
 });

@@ -117,7 +117,7 @@ export function HeaderNavigation({ locale, dictionary }: HeaderNavigationProps) 
         <LocaleSwitcher locale={locale} />
         <HeaderMenuButton
           expanded={isOpen}
-          label={getHeaderMenuButtonLabel(isOpen)}
+          label={getHeaderMenuButtonLabel(locale, isOpen)}
           onClick={() => setIsOpen((value) => !value)}
         />
       </div>
@@ -162,8 +162,9 @@ export function HeaderNavigationMenu({
         return (
           <Link
             key={item.href}
-            className={isActive ? "site-nav__link site-nav__link--active" : "site-nav__link"}
             href={withLocale(locale, item.href)}
+            aria-current={isActive ? "page" : undefined}
+            className={isActive ? "site-nav__link site-nav__link--active" : "site-nav__link"}
             onClick={onNavigate}
           >
             {item.label}

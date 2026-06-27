@@ -1,30 +1,36 @@
 ---
-title: "Voluntariat la patul copilului: ce inseamna prezenta potrivita"
-excerpt: Cum arata o interventie cu Budo in spital si de ce continuitatea conteaza mai mult decat gestul spectaculos.
-publishedAt: 2026-04-21
+title: "Voluntariat la patul copilului: ce înseamnă prezența potrivită"
+excerpt: Cum arată o intervenție cu Budo în spital și de ce continuitatea contează mai mult decât gestul spectaculos.
+publishedAt: "2026-04-21"
 author: Echipa Kids Kicking Cancer with Budo
 coverId: thumbs-up-bedside
+translationKey: bedside-volunteering
+category: Voluntariat
+tags:
+  - la patul copilului
+  - voluntari
+  - Budo
 ---
 
-La prima vedere, cineva ar putea crede ca programul nostru inseamna doar o vizita incurajatoare sau o demonstratie simbolica. In realitate, o interventie potrivita la patul copilului are nevoie de **ritm**, **disciplina** si **adaptare la contextul medical**.
+La prima vedere, cineva ar putea crede că programul nostru înseamnă doar o vizită încurajatoare sau o demonstrație simbolică. În realitate, o intervenție potrivită la patul copilului are nevoie de **ritm**, **disciplină** și **adaptare la contextul medical**.
 
-## Ce aduce un voluntar bine pregatit
+## Ce aduce un voluntar bine pregătit
 
-- o relatie calma si recognoscibila
-- exercitii scurte de respiratie si focalizare
-- gesturi corporale simple care ofera repere clare in timpul interventiei
-- un limbaj coerent intre copil, familie si echipa din jur
+- o relație calmă și recognoscibilă
+- exerciții scurte de respirație și focalizare
+- gesturi corporale simple care oferă repere clare în timpul intervenției
+- un limbaj coerent între copil, familie și echipa din jur
 
-Voluntarul nu intra in spital ca sa preia locul medicului sau al psihologului. El contribuie cu o prezenta calma, cu exercitii scurte si cu un cadru recognoscibil care poate sprijini copilul in timpul tratamentului.
+Voluntarul nu intră în spital ca să preia locul medicului sau al psihologului. El contribuie cu o prezență calmă, cu exerciții scurte și cu un cadru recognoscibil care poate sprijini copilul în timpul tratamentului.
 
-## De ce conteaza continuitatea
+## De ce contează continuitatea
 
-Un copil recunoaste mai usor o metoda atunci cand o intalneste repetat, intr-un cadru consecvent si adaptat situatiei medicale. Continuitatea ajuta familia, voluntarii si echipa din jur sa foloseasca acelasi limbaj de respiratie, atentie si incurajare.
+Un copil recunoaște mai ușor o metodă atunci când o întâlnește repetat, într-un cadru consecvent și adaptat situației medicale. Continuitatea ajută familia, voluntarii și echipa din jur să folosească același limbaj de respirație, atenție și încurajare.
 
 ## Ce presupune un cadru responsabil
 
-- respectarea indicatiilor medicale si a limitelor fiecarui context clinic
-- adaptarea exercitiilor la varsta, starea si energia copilului
-- colaborare atenta cu familia si personalul medical
+- respectarea indicațiilor medicale și a limitelor fiecărui context clinic
+- adaptarea exercițiilor la vârstă, starea și energia copilului
+- colaborare atentă cu familia și personalul medical
 
-Scopul nu este sa dramatizam spitalul. Scopul este sa facem loc curajului intr-un context in care copilul are foarte putin control.
+Scopul nu este să dramatizăm spitalul. Scopul este să facem loc curajului într-un context în care copilul are foarte puțin control.

@@ -1,28 +1,34 @@
 ---
-title: O agenda de cercetare europeana pentru metoda Budo
-excerpt: De ce capitolul din Bucuresti are nevoie de proiecte pilot, universitati partenere si granturi care transforma practica in dovezi publice.
-publishedAt: 2026-04-17
+title: O agendă de cercetare europeană pentru metoda Budo
+excerpt: De ce capitolul din București are nevoie de proiecte pilot, universități partenere și granturi care transformă practica în dovezi publice.
+publishedAt: "2026-04-17"
 author: Echipa Kids Kicking Cancer with Budo
 coverId: team-with-student
+translationKey: eu-research-roadmap
+category: Cercetare
+tags:
+  - cercetare
+  - parteneriate academice
+  - proiecte pilot
 ---
 
-Pentru ca metoda sa se dezvolte responsabil in Romania, nu este suficient sa afirmam ca are valoare. Este nevoie de proiecte care pot fi explicate, evaluate si discutate impreuna cu parteneri clinici si academici.
+Pentru ca metoda să se dezvolte responsabil în România, nu este suficient să afirmăm că are valoare. Este nevoie de proiecte care pot fi explicate, evaluate și discutate împreună cu parteneri clinici și academici.
 
-## Ce poate fi documentat in mod realist
+## Ce poate fi documentat în mod realist
 
-Primele intrebari de cercetare pot urmari:
+Primele întrebări de cercetare pot urmări:
 
-1. felul in care copilul descrie durerea si stresul procedural inainte si dupa sesiuni
-2. toleranta la proceduri si calitatea colaborarii in timpul interventiilor
-3. feedback-ul familiilor si al personalului medical privind fezabilitatea metodei
+1. felul în care copilul descrie durerea și stresul procedural înainte și după sesiuni
+2. toleranța la proceduri și calitatea colaborării în timpul intervențiilor
+3. feedback-ul familiilor și al personalului medical privind fezabilitatea metodei
 
-## Cu cine ar fi utila colaborarea
+## Cu cine ar fi utilă colaborarea
 
-- parteneriate cu universitati
-- colaborari cu spitale si echipe clinice interesate de interventii complementare
-- proiecte europene dedicate bunastarii pediatrice si inovatiei sociale
-- schimb de experienta cu ONG-uri care lucreaza in oncologia pediatrica sau in suportul emotional al copiilor
+- parteneriate cu universități
+- colaborări cu spitale și echipe clinice interesate de intervenții complementare
+- proiecte europene dedicate bunăstării pediatrice și inovației sociale
+- schimb de experiență cu ONG-uri care lucrează în oncologia pediatrică sau în suportul emoțional al copiilor
 
-## De ce conteaza aceasta directie
+## De ce contează această direcție
 
-Un finantator sau un partener academic are nevoie de claritate, seriozitate si date bine contextualizate. O organizatie care formuleaza atent intrebarile de cercetare si documenteaza responsabil activitatea poate construi mai usor incredere, parteneriate si proiecte sustenabile.
+Un finanțator sau un partener academic are nevoie de claritate, seriozitate și date bine contextualizate. O organizație care formulează atent întrebările de cercetare și documentează responsabil activitatea poate construi mai ușor încredere, parteneriate și proiecte sustenabile.

@@ -11,6 +11,16 @@ export type ActionLink = {
   variant?: "primary" | "secondary" | "ghost";
 };
 
+export type DocumentDownload = {
+  title: string;
+  description: string;
+  href: string;
+  fileType: "PDF";
+  language: string;
+  date: string;
+  downloadLabel: string;
+};
+
 export type SiteDictionary = {
   meta: {
     title: string;
@@ -66,6 +76,7 @@ export type SiteDictionary = {
     eyebrow: string;
     title: string;
     intro: string;
+    linkLabel: string;
     items: Array<{
       title: string;
       body: string;
@@ -139,9 +150,17 @@ export type SiteDictionary = {
         title: string;
         body: string;
       }>;
+      documents: {
+        title: string;
+        intro: string;
+        warning: string;
+        items: DocumentDownload[];
+      };
       bank: {
         title: string;
         intro: string;
+        trustTitle: string;
+        trustBody: string;
         holderLabel: string;
         ibanLabel: string;
         bicLabel: string;
@@ -160,6 +179,11 @@ export type SiteDictionary = {
       visitBody: string[];
       legalTitle: string;
       legalBody: string[];
+      governance: {
+        title: string;
+        body: string;
+        items: DocumentDownload[];
+      };
     };
   };
   footer: {
@@ -180,11 +204,11 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     meta: {
       title: "Kids Kicking Cancer with Budo",
       description:
-        "Site bilingv al Kids Kicking Cancer with Budo, capitolul din Bucuresti: metoda Budo in sprijinul copiilor aflati in tratament, voluntariat in spitale, cercetare si strangere de fonduri."
+        "Site bilingv al Kids Kicking Cancer with Budo, capitolul din București: metoda Budo în sprijinul copiilor aflați în tratament, voluntariat în spitale, cercetare și strângere de fonduri."
     },
     brand: {
       name: "Kids Kicking Cancer with Budo",
-      chapter: "Bucuresti, Romania",
+      chapter: "București, România",
       tagline: "Power Peace Purpose"
     },
     nav: [
@@ -196,10 +220,10 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       { href: "/contact", label: "Contact" }
     ],
     hero: {
-      eyebrow: "Capitolul din Bucuresti al miscarii Kids Kicking Cancer",
-      title: "Transformam momentele de tratament in momente de curaj.",
+      eyebrow: "Capitolul din București al mișcării Kids Kicking Cancer",
+      title: "Transformăm momentele de tratament în momente de curaj.",
       lede:
-        "Capitolul din Bucuresti lucreaza cu copii aflati in tratament prin exercitii de respiratie, postura si concentrare inspirate din Budo, adaptate mediului medical si sustinute de voluntari pregatiti.",
+        "Capitolul din București lucrează cu copii aflați în tratament prin exerciții de respirație, postură și concentrare inspirate din Budo, adaptate mediului medical și susținute de voluntari pregătiți.",
       primaryAction: {
         href: "/get-involved",
         label: "Devino voluntar",
@@ -207,106 +231,107 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       },
       secondaryAction: {
         href: "/research",
-        label: "Vezi directiile de cercetare",
+        label: "Vezi direcțiile de cercetare",
         variant: "secondary"
       },
       note:
-        "Programul reuneste interventia la patul copilului, pregatirea voluntarilor, cercetarea aplicata si strangerea de fonduri necesara pentru continuitate.",
+        "Programul reunește intervenția la patul copilului, pregătirea voluntarilor, cercetarea aplicată și strângerea de fonduri necesară pentru continuitate.",
       imageId: "hero-bedside-punch",
       highlights: [
-        { value: "3 directii", label: "voluntariat, cercetare, strangere de fonduri" },
-        { value: "Bilingv", label: "romana si engleza" },
-        { value: "1 misiune", label: "curaj, reglare si sprijin" }
+        { value: "3 direcții", label: "voluntariat, cercetare, strângere de fonduri" },
+        { value: "Bilingv", label: "română și engleză" },
+        { value: "1 misiune", label: "curaj, reglare și sprijin" }
       ]
     },
     chapter: {
-      eyebrow: "Identitate locala",
-      title: "Capitolul din Bucuresti aduce local o metoda cu istorie internationala.",
+      eyebrow: "Identitate locală",
+      title: "Capitolul din București aduce local o metodă cu istorie internațională.",
       body:
-        "Capitolul din Bucuresti face parte din miscarea internationala Kids Kicking Cancer si lucreaza pentru a aduce metoda Budo in spitale, impreuna cu voluntari, familii si parteneri institutionali.",
+        "Capitolul din București face parte din mișcarea internațională Kids Kicking Cancer și lucrează pentru a aduce metoda Budo în spitale, împreună cu voluntari, familii și parteneri instituționali.",
       facts: [
-        "Capitol activ in Bucuresti, Sector 3",
-        "Autorizare obtinuta in 2025",
-        "Parte dintr-o mostenire internationala Kids Kicking Cancer"
+        "Capitol activ în București, Sector 3",
+        "Autorizare obținută în 2025",
+        "Parte dintr-o moștenire internațională Kids Kicking Cancer"
       ],
       detailLinkLabel: "Vezi datele oficiale"
     },
     pillars: {
       eyebrow: "Ce facem",
-      title: "Lucram pe trei directii care se sustin reciproc.",
+      title: "Lucrăm pe trei direcții care se susțin reciproc.",
       intro:
-        "Munca organizatiei incepe la patul copilului si se extinde prin cercetare si sprijin din partea comunitatii.",
+        "Munca organizației începe la patul copilului și se extinde prin cercetare și sprijin din partea comunității.",
       items: [
         {
-          title: "Voluntariat in spitale",
+          title: "Voluntariat în spitale",
           body:
-            "Voluntarii lucreaza cu copilul prin exercitii scurte de respiratie, postura si focalizare, intr-un cadru sigur, disciplinat si atent la contextul medical.",
+            "Voluntarii lucrează cu copilul prin exerciții scurte de respirație, postură și focalizare, într-un cadru sigur, disciplinat și atent la contextul medical.",
           href: "/get-involved",
           linkLabel: "Cum te implici"
         },
         {
-          title: "Cercetare si proiecte cu finantare UE",
+          title: "Cercetare și proiecte cu finanțare UE",
           body:
-            "Cautam studii pilot si parteneriate cu spitale si universitati care pot evalua durerea perceputa, stresul procedural si fezabilitatea metodei.",
+            "Căutăm studii pilot și parteneriate cu spitale și universități care pot evalua durerea percepută, stresul procedural și fezabilitatea metodei.",
           href: "/research",
           linkLabel: "Agenda de cercetare"
         },
         {
-          title: "Strangere de fonduri cu sens",
+          title: "Strângere de fonduri cu sens",
           body:
-            "Fondurile sustin prezenta voluntarilor in spitale, formarea echipei, documentarea responsabila si pregatirea proiectelor de cercetare.",
+            "Fondurile susțin prezența voluntarilor în spitale, formarea echipei, documentarea responsabilă și pregătirea proiectelor de cercetare.",
           href: "/blog",
-          linkLabel: "Idei si povesti"
+          linkLabel: "Idei și povești"
         }
       ]
     },
     method: {
-      eyebrow: "Cum functioneaza",
-      title: "Metoda Budo ca practica concreta de reglare.",
+      eyebrow: "Cum funcționează",
+      title: "Metoda Budo ca practică concretă de reglare.",
       intro:
-        "Copiii invata exercitii scurte pe care le pot folosi cand urmeaza o procedura, in timpul ei sau dupa aceea.",
+        "Copiii învață exerciții scurte pe care le pot folosi când urmează o procedură, în timpul ei sau după aceea.",
       steps: [
         {
-          title: "Respiratie",
+          title: "Respirație",
           body:
-            "Respiratia da ritm si il ajuta pe copil sa isi recapete atentia intr-un moment dificil."
+            "Respirația dă ritm și îl ajută pe copil să își recapete atenția într-un moment dificil."
         },
         {
-          title: "Postura si voce",
+          title: "Postură și voce",
           body:
-            "Postura, privirea si vocea il ajuta pe copil sa treaca din pasivitate in participare."
+            "Postura, privirea și vocea îl ajută pe copil să treacă din pasivitate în participare."
         },
         {
           title: "Comunitate",
           body:
-            "Cand voluntarii, familia si echipa medicala folosesc aceleasi repere, metoda devine recognoscibila si repetabila."
+            "Când voluntarii, familia și echipa medicală folosesc aceleași repere, metoda devine recognoscibilă și repetabilă."
         }
       ]
     },
     evidence: {
       eyebrow: "Repere utile",
-      title: "Aceste organizatii arata cum pot fi legate metoda, cercetarea si sprijinul pentru familii.",
+      title: "Aceste organizații arată cum pot fi legate metoda, cercetarea și sprijinul pentru familii.",
       intro:
-        "Le includem pentru ca ofera exemple clare de programe, resurse si comunicare publica credibila.",
+        "Le includem pentru că oferă exemple clare de programe, resurse și comunicare publică credibilă.",
+      linkLabel: "Vezi referința",
       items: [
         {
           title: "MATIO / fostul Kids Kicking Cancer",
           body:
-            "Arata cum poate fi explicata metoda familiilor si cum pot fi reunite resursele de cercetare intr-un singur loc.",
+            "Arată cum poate fi explicată metoda familiilor și cum pot fi reunite resursele de cercetare într-un singur loc.",
           href: "https://mymatio.org/resources/",
           source: "mymatio.org"
         },
         {
           title: "Children with Cancer UK",
           body:
-            "Arata cum pot fi prezentate cercetarea, sprijinul pentru familii si strangerea de fonduri fara a pierde claritatea.",
+            "Arată cum pot fi prezentate cercetarea, sprijinul pentru familii și strângerea de fonduri fără a pierde claritatea.",
           href: "https://www.childrenwithcancer.org.uk/about-us/",
           source: "childrenwithcancer.org.uk"
         },
         {
           title: "World Child Cancer",
           body:
-            "Arata cum poate vorbi un ONG despre parteneriate, politici publice si schimbare pe termen lung.",
+            "Arată cum poate vorbi un ONG despre parteneriate, politici publice și schimbare pe termen lung.",
           href: "https://worldchildcancer.org/mission-vision/",
           source: "worldchildcancer.org"
         }
@@ -314,9 +339,9 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     },
     archive: {
       eyebrow: "Arhiva programului",
-      title: "Fotografiile din arhiva arata ca programul are istorie si activitate documentata.",
+      title: "Fotografiile din arhivă arată că programul are istorie și activitate documentată.",
       intro:
-        "Imaginile surprind interventii la patul copilului, momente de formare si legatura directa cu comunitatea internationala Kids Kicking Cancer.",
+        "Imaginile surprind intervenții la patul copilului, momente de formare și legătura directă cu comunitatea internațională Kids Kicking Cancer.",
       imageIds: [
         "thumbs-up-bedside",
         "team-with-student",
@@ -326,10 +351,10 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       ]
     },
     blog: {
-      eyebrow: "Din activitatea noastra",
-      title: "Articole despre metoda, voluntariat si cercetare.",
+      eyebrow: "Din activitatea noastră",
+      title: "Articole despre metodă, voluntariat și cercetare.",
       intro:
-        "Aici explicam cum lucram, ce parteneriate cautam si ce poate sustine comunitatea.",
+        "Aici explicăm cum lucrăm, ce parteneriate căutăm și ce poate susține comunitatea.",
       cta: {
         href: "/blog",
         label: "Toate articolele",
@@ -337,20 +362,20 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       }
     },
     finalCta: {
-      eyebrow: "Implica-te",
-      title: "Ajuta-ne sa ducem aceasta munca mai departe in Romania.",
+      eyebrow: "Implică-te",
+      title: "Ajută-ne să ducem această muncă mai departe în România.",
       body:
-        "Capitolul din Bucuresti cauta voluntari, parteneri si sustinatori care pot mentine prezenta in spitale si pot sustine proiectele de cercetare si dezvoltare.",
+        "Capitolul din București caută voluntari, parteneri și susținători care pot menține prezența în spitale și pot susține proiectele de cercetare și dezvoltare.",
       actions: [
-        { href: "/get-involved", label: "Vreau sa ajut", variant: "primary" },
-        { href: "/contact", label: "Date legale si adresa", variant: "secondary" }
+        { href: "/get-involved", label: "Vreau să ajut", variant: "primary" },
+        { href: "/contact", label: "Date legale și adresă", variant: "secondary" }
       ]
     },
     innerCta: {
-      eyebrow: "Implica-te cu masura",
-      title: "Sustine prezenta in spitale.",
+      eyebrow: "Implică-te cu măsură",
+      title: "Susține prezența în spitale.",
       body:
-        "Daca poti ajuta prin timp, parteneriate sau sprijin financiar, pagina de implicare explica pasii concreti si datele utile.",
+        "Dacă poți ajuta prin timp, parteneriate sau sprijin financiar, pagina de implicare explică pașii concreți și datele utile.",
       action: {
         href: "/get-involved",
         label: "Vezi cum te implici",
@@ -359,86 +384,86 @@ export const siteContent: Record<Locale, SiteDictionary> = {
     },
     pages: {
       about: {
-        title: "Despre capitolul din Bucuresti",
+        title: "Despre capitolul din București",
         lede:
-          "Capitolul din Bucuresti porneste din istoria internationala a miscarii si din experienta deja documentata in imagini si activitati publice.",
-        storyTitle: "De la mostenirea internationala la un capitol local solid",
+          "Capitolul din București pornește din istoria internațională a mișcării și din experiența deja documentată în imagini și activități publice.",
+        storyTitle: "De la moștenirea internațională la un capitol local solid",
         storyBody: [
-          "Arhiva arata interventii la patul copilului, intalniri internationale si aparitii publice care leaga direct capitolul din Bucuresti de istoria mai larga a programului.",
-          "Obiectivul local este limpede: o organizatie care lucreaza responsabil in spitale, formeaza voluntari si construieste parteneriate pentru cercetare si finantare."
+          "Arhiva arată intervenții la patul copilului, întâlniri internaționale și apariții publice care leagă direct capitolul din București de istoria mai largă a programului.",
+          "Obiectivul local este limpede: o organizație care lucrează responsabil în spitale, formează voluntari și construiește parteneriate pentru cercetare și finanțare."
         ],
         milestones: [
           {
             year: "2012",
             title: "Context european",
-            body: "Imaginile din Roma arata legatura cu comunitatea europeana care a sustinut metoda."
+            body: "Imaginile din Roma arată legătura cu comunitatea europeană care a susținut metoda."
           },
           {
             year: "2017-2019",
-            title: "Documentarea interventiilor la patul copilului",
-            body: "Fotografiile bedside documenteaza lucrul direct dintre copii si voluntari in spital."
+            title: "Documentarea intervențiilor la patul copilului",
+            body: "Fotografiile bedside documentează lucrul direct dintre copii și voluntari în spital."
           },
           {
             year: "2025",
-            title: "Autorizarea din Romania",
-            body: "Autorizarea din Romania a facut posibila dezvoltarea oficiala a capitolului."
+            title: "Autorizarea din România",
+            body: "Autorizarea din România a făcut posibilă dezvoltarea oficială a capitolului."
           }
         ]
       },
       method: {
         title: "Metoda Budo",
         lede:
-          "Metoda ii invata pe copii exercitii practice pe care le pot folosi cand frica, durerea sau anticiparea devin prea puternice.",
+          "Metoda îi învață pe copii exerciții practice pe care le pot folosi când frica, durerea sau anticiparea devin prea puternice.",
         principles: [
           {
             title: "Instrumente simple, repetabile",
-            body: "Respiratia, atentia, gestul si vocea pot fi invatate repede si pot fi repetate ori de cate ori este nevoie."
+            body: "Respirația, atenția, gestul și vocea pot fi învățate repede și pot fi repetate ori de câte ori este nevoie."
           },
           {
             title: "Adaptare la realitatea spitalului",
-            body: "Metoda se adapteaza contextului medical: la patul copilului, in sala de tratament, in grupuri mici sau in afara spitalului."
+            body: "Metoda se adaptează contextului medical: la patul copilului, în sala de tratament, în grupuri mici sau în afara spitalului."
           },
           {
-            title: "Colaborare cu medicina, nu in locul ei",
-            body: "Interventia completeaza ingrijirea medicala si este gandita sa lucreze alaturi de echipa clinica, nu in locul ei."
+            title: "Colaborare cu medicina, nu în locul ei",
+            body: "Intervenția completează îngrijirea medicală și este gândită să lucreze alături de echipa clinică, nu în locul ei."
           }
         ],
         quote:
-          "Copilul nu ramane doar pacientul unei proceduri. Devine participant activ intr-un moment care altfel ar fi definit doar de frica."
+          "Copilul nu rămâne doar pacientul unei proceduri. Devine participant activ într-un moment care altfel ar fi definit doar de frică."
       },
       research: {
-        title: "Cercetare, granturi si vizibilitate europeana",
+        title: "Cercetare, granturi și vizibilitate europeană",
         lede:
-          "Capitolul din Bucuresti cauta spitale, universitati si finantatori care pot evalua metoda in proiecte pilot si granturi europene.",
-        referenceLinkLabel: "Vezi referinta",
+          "Capitolul din București caută spitale, universități și finanțatori care pot evalua metoda în proiecte pilot și granturi europene.",
+        referenceLinkLabel: "Vezi referința",
         focus: [
           {
-            title: "Studii pilot in Romania",
-            body: "Urmarim durerea perceputa, stresul procedural, toleranta la proceduri si feedback-ul familiilor."
+            title: "Studii pilot în România",
+            body: "Urmărim durerea percepută, stresul procedural, toleranța la proceduri și feedback-ul familiilor."
           },
           {
-            title: "Consortii europene",
-            body: "Vizam parteneriate cu universitati, spitale si ONG-uri pentru granturi despre suport pediatric si inovatie sociala."
+            title: "Consorții europene",
+            body: "Vizăm parteneriate cu universități, spitale și ONG-uri pentru granturi despre suport pediatric și inovație socială."
           },
           {
-            title: "Cercetare aplicata pentru vizibilitate publica",
-            body: "Rezultatele pot fi prezentate in conferinte, materiale pentru familii si campanii publice care explica metoda clar."
+            title: "Cercetare aplicată pentru vizibilitate publică",
+            body: "Rezultatele pot fi prezentate în conferințe, materiale pentru familii și campanii publice care explică metoda clar."
           }
         ],
         inspirations: [
           {
             title: "MATIO Research & Resources",
-            body: "Exemplu de organizatie care pune laolalta metoda, resursele pentru familii si materialele de cercetare.",
+            body: "Exemplu de organizație care pune laolaltă metoda, resursele pentru familii și materialele de cercetare.",
             href: "https://mymatio.org/resources/"
           },
           {
             title: "World Child Cancer Mission & Vision",
-            body: "Exemplu de limbaj clar despre parteneriate internationale si schimbare la nivel de sistem.",
+            body: "Exemplu de limbaj clar despre parteneriate internaționale și schimbare la nivel de sistem.",
             href: "https://worldchildcancer.org/mission-vision/"
           },
           {
             title: "Dăruiește Viață",
-            body: "Exemplu local de comunicare directa despre proiecte pediatrice, nevoi si folosirea fondurilor.",
+            body: "Exemplu local de comunicare directă despre proiecte pediatrice, nevoi și folosirea fondurilor.",
             href: "https://www.daruiesteviata.ro/en/proiecte/children-s-call-for-hope"
           }
         ]
@@ -446,29 +471,61 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       getInvolved: {
         title: "Cum te implici",
         lede:
-          "Capitolul din Bucuresti are nevoie de oameni si institutii care pot sustine atat munca din spital, cat si dezvoltarea organizatiei.",
+          "Capitolul din București are nevoie de oameni și instituții care pot susține atât munca din spital, cât și dezvoltarea organizației.",
         cards: [
           {
             title: "Voluntariat",
-            body: "Pentru practicieni Budo si pentru oameni care pot ajuta cu organizare, traduceri, foto-video sau comunicare."
+            body: "Pentru practicieni Budo și pentru oameni care pot ajuta cu organizare, traduceri, foto-video sau comunicare."
           },
           {
             title: "Parteneriate",
-            body: "Pentru spitale, universitati, sponsori si specialisti care pot sprijini cercetarea, logistica sau finantarea."
+            body: "Pentru spitale, universități, sponsori și specialiști care pot sprijini cercetarea, logistica sau finanțarea."
           },
           {
             title: "Fundraising comunitar",
-            body: "Pentru campanii locale, evenimente scolare, initiative sportive si implicarea companiilor."
+            body: "Pentru campanii locale, evenimente școlare, inițiative sportive și implicarea companiilor."
           }
         ],
+        documents: {
+          title: "Standarde și formulare",
+          intro:
+            "Voluntariatul începe cu aceleași repere etice pentru toți cei implicați.",
+          warning:
+            "Formularele completate conțin date personale. Trimite-le doar prin procesul confirmat de organizație, după ce primești instrucțiunile oficiale.",
+          items: [
+            {
+              title: "Codul de etică",
+              description:
+                "Standardele de conduită pentru membrii și voluntarii Kids Kicking Cancer with Budo. Document oficial în limba română.",
+              href: "/documents/codul-de-etica-kkcb-ro-2026-05-16.pdf",
+              fileType: "PDF",
+              language: "română",
+              date: "16 mai 2026",
+              downloadLabel: "Descarcă PDF"
+            },
+            {
+              title: "Cerere voluntar / membru",
+              description:
+                "Formular blank în limba română pentru solicitarea admiterii ca voluntar și/sau membru.",
+              href: "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.pdf",
+              fileType: "PDF",
+              language: "română",
+              date: "16 mai 2026",
+              downloadLabel: "Descarcă PDF"
+            }
+          ]
+        },
         bank: {
           title: "Transfer bancar",
           intro:
-            "Pentru donatii prin transfer bancar, foloseste datele de mai jos exact asa cum sunt afisate.",
+            "Pentru donații prin transfer bancar, folosește datele de mai jos exact așa cum sunt afișate.",
+          trustTitle: "Ce susține transferul bancar",
+          trustBody:
+            "Transferurile bancare susțin prezența voluntarilor în spitale, formarea echipei, logistica activităților, documentarea responsabilă și pregătirea parteneriatelor de cercetare.",
           holderLabel: "Titular cont",
           ibanLabel: "IBAN",
           bicLabel: "BIC/SWIFT",
-          copyLabel: "Copiaza",
+          copyLabel: "Copiază",
           copiedLabel: "Copiat",
           holder: "KIDS KICKING CANCER with BUDO",
           iban: "RO83 RNCB 0082 1852 9530 0001",
@@ -476,42 +533,59 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         },
         actions: [
           { href: "/blog", label: "Vezi idei de campanii", variant: "secondary" },
-          { href: "/contact", label: "Datele organizatiei", variant: "ghost" }
+          { href: "/contact", label: "Datele organizației", variant: "ghost" }
         ]
       },
       contact: {
         title: "Date de identificare",
         lede:
-          "Aici gasesti datele juridice si adresa organizatiei.",
+          "Aici găsești datele juridice și adresa organizației.",
         visitTitle: "Adresa",
         visitBody: [
           "Mămulari 2, Bl. C1, Sc. 2, Et. 2, Ap. 27",
-          "Bucuresti, Sector 3",
-          "Romania"
+          "București, Sector 3",
+          "România"
         ],
-        legalTitle: "Identificare administrativa",
+        legalTitle: "Identificare administrativă",
         legalBody: [
           "KIDS KICKING CANCER WITH BUDO",
           "Act autorizare: DOSAR NR. 26674/301/394/26.11.2025"
-        ]
+        ],
+        governance: {
+          title: "Standarde de guvernanță",
+          body:
+            "Codul de etică public documentează conduita așteptată de la membrii, voluntarii și colaboratorii organizației.",
+          items: [
+            {
+              title: "Codul de etică",
+              description:
+                "Document oficial în limba română pentru standardele de conduită ale Kids Kicking Cancer with Budo.",
+              href: "/documents/codul-de-etica-kkcb-ro-2026-05-16.pdf",
+              fileType: "PDF",
+              language: "română",
+              date: "16 mai 2026",
+              downloadLabel: "Descarcă PDF"
+            }
+          ]
+        }
       }
     },
     footer: {
       mission:
-        "Lucram pentru ca fiecare copil aflat in tratament sa aiba la indemana respiratia, atentia si curajul pe care le poate practica prin metoda Budo.",
+        "Lucrăm pentru ca fiecare copil aflat în tratament să aibă la îndemână respirația, atenția și curajul pe care le poate practica prin metoda Budo.",
       addressLabel: "Adresa",
       legalLabel: "Date legale",
       addressLines: [
         "Mămulari 2, Bl. C1, Sc. 2, Et. 2, Ap. 27",
-        "Bucuresti, Sector 3, Romania"
+        "București, Sector 3, România"
       ],
       legalLines: [
         "KIDS KICKING CANCER WITH BUDO",
         "DOSAR NR. 26674/301/394/26.11.2025"
       ],
-      versionLabel: "Versiune publica",
+      versionLabel: "Versiune publică",
       servedByBrandPosition: "end",
-      servedByBrandSuffix: "care serveste acest site:",
+      servedByBrandSuffix: "care servește acest site:",
       servedByLabel: "Edge nodul"
     }
   },
@@ -627,6 +701,7 @@ export const siteContent: Record<Locale, SiteDictionary> = {
       title: "These organizations show how method, research, and family support can be connected.",
       intro:
         "We include them because they offer clear examples of programs, resources, and credible public communication.",
+      linkLabel: "Open source",
       items: [
         {
           title: "MATIO / formerly Kids Kicking Cancer",
@@ -800,10 +875,42 @@ export const siteContent: Record<Locale, SiteDictionary> = {
             body: "For local campaigns, school events, sports initiatives, and company-led support."
           }
         ],
+        documents: {
+          title: "Standards and forms",
+          intro:
+            "Volunteering starts from the same ethical standards for everyone involved.",
+          warning:
+            "Completed forms contain personal data. Send them only through the confirmed process after receiving official instructions from the organization.",
+          items: [
+            {
+              title: "Code of Ethics",
+              description:
+                "Official governance document in Romanian for Kids Kicking Cancer with Budo members and volunteers.",
+              href: "/documents/codul-de-etica-kkcb-ro-2026-05-16.pdf",
+              fileType: "PDF",
+              language: "Romanian",
+              date: "16 May 2026",
+              downloadLabel: "Download PDF"
+            },
+            {
+              title: "Volunteer / member application",
+              description:
+                "Official blank form in Romanian for applying as a volunteer and/or member.",
+              href: "/documents/cerere-voluntar-membru-kkcb-ro-2026-05-16.pdf",
+              fileType: "PDF",
+              language: "Romanian",
+              date: "16 May 2026",
+              downloadLabel: "Download PDF"
+            }
+          ]
+        },
         bank: {
           title: "Bank transfer",
           intro:
             "For donations by bank transfer, use the details below exactly as shown.",
+          trustTitle: "What bank transfers support",
+          trustBody:
+            "Bank transfers support volunteer presence in hospitals, team training, activity logistics, responsible documentation, and preparation for research partnerships.",
           holderLabel: "Account holder",
           ibanLabel: "IBAN",
           bicLabel: "BIC/SWIFT",
@@ -832,7 +939,24 @@ export const siteContent: Record<Locale, SiteDictionary> = {
         legalBody: [
           "KIDS KICKING CANCER WITH BUDO",
           "Authorization record: DOSAR NR. 26674/301/394/26.11.2025"
-        ]
+        ],
+        governance: {
+          title: "Governance standards",
+          body:
+            "The public Code of Ethics documents expected conduct for the organization's members, volunteers, and collaborators.",
+          items: [
+            {
+              title: "Code of Ethics",
+              description:
+                "Official governance document in Romanian for the conduct standards of Kids Kicking Cancer with Budo.",
+              href: "/documents/codul-de-etica-kkcb-ro-2026-05-16.pdf",
+              fileType: "PDF",
+              language: "Romanian",
+              date: "16 May 2026",
+              downloadLabel: "Download PDF"
+            }
+          ]
+        }
       }
     },
     footer: {

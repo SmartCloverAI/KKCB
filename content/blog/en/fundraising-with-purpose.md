@@ -1,9 +1,15 @@
 ---
 title: "Fundraising with purpose: raising money without losing the human center"
 excerpt: Donations need to be tied clearly to outcomes, processes, and credible stories instead of vague emotional pressure.
-publishedAt: 2026-04-12
+publishedAt: "2026-04-12"
 author: Kids Kicking Cancer with Budo Team
 coverId: balloon-prep-bedside
+translationKey: fundraising-with-purpose
+category: Fundraising
+tags:
+  - donations
+  - campaigns
+  - community
 ---
 
 Good fundraising is not permanent emotional pressure. It is the discipline of explaining what you do, why it matters, and what becomes possible when a community contributes.

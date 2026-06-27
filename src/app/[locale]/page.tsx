@@ -147,7 +147,7 @@ export default async function HomePage({
                 rel="noreferrer"
                 target="_blank"
               >
-                Open source
+                {dictionary.evidence.linkLabel}
               </a>
             </article>
           ))}

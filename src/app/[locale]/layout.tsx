@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 
 import { SiteFooter, SiteHeader } from "@/components/site-ui";
 import { getDictionary } from "@/content/site";

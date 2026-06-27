@@ -42,6 +42,12 @@ export default async function BlogPostPage({
             <span>{post.readingTime}</span>
           </div>
           <p className="post-header__excerpt">{post.excerpt}</p>
+          {post.category || post.tags?.length ? (
+            <div className="post-header__meta">
+              {post.category ? <span>{post.category}</span> : null}
+              {post.tags?.map((tag) => <span key={tag}>{tag}</span>)}
+            </div>
+          ) : null}
         </header>
         {cover ? (
           <figure className="post-cover">

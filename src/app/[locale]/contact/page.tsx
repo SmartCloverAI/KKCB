@@ -1,3 +1,4 @@
+import { DocumentCard } from "@/components/document-card";
 import { InnerCta, PageHero } from "@/components/site-ui";
 import { getDictionary } from "@/content/site";
 import { ensureLocale } from "@/lib/site-utils";
@@ -28,6 +29,20 @@ export default async function ContactPage({
             <p key={line}>{line}</p>
           ))}
         </article>
+      </section>
+      <section className="section">
+        <div className="section-intro">
+          <div className="section-intro__head">
+            <p className="eyebrow">Kids Kicking Cancer with Budo</p>
+            <h2>{page.governance.title}</h2>
+          </div>
+          <p className="section-intro__copy">{page.governance.body}</p>
+        </div>
+        <div className="reference-grid">
+          {page.governance.items.map((document) => (
+            <DocumentCard document={document} key={document.href} />
+          ))}
+        </div>
       </section>
       <InnerCta dictionary={dictionary} locale={locale} />
     </main>

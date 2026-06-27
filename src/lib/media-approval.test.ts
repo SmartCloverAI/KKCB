@@ -37,7 +37,7 @@ describe("media approval review", () => {
     expect(violations).toEqual([]);
   });
 
-  it("keeps approved and quarantined originals in the expected folders", () => {
+  it("keeps approved originals present and non-approved originals out of public media", () => {
     const reviewEntries = mediaReview as ReviewEntry[];
     const approved = reviewEntries.filter((entry) => entry.status === "approved");
     const unapproved = reviewEntries.filter((entry) => entry.status === "unapproved");
@@ -49,17 +49,36 @@ describe("media approval review", () => {
         : [`missing approved original: ${entry.source}`];
     });
 
-    const quarantineViolations = unapproved.flatMap((entry) => {
-      const quarantinedPath = path.join(
+    const publicMedia = new Set(
+      (mediaManifest as Array<{ source: string }>).map((entry) => entry.source)
+    );
+
+    const unapprovedViolations = unapproved.flatMap((entry) => {
+      const approvedOriginalPath = path.join(process.cwd(), entry.source);
+      const quarantineSource = entry.source.replace(/^assets\/originals\//, "_unapproved/");
+      const publicPath = path.join(
         process.cwd(),
-        entry.source.replace(/^assets\/originals\//, "_unapproved/")
+        "public",
+        "media",
+        path.basename(entry.source)
       );
 
-      return fs.existsSync(quarantinedPath)
-        ? []
-        : [`missing quarantined original: ${quarantinedPath}`];
+      return [
+        fs.existsSync(approvedOriginalPath)
+          ? `${entry.source} is still in approved originals`
+          : null,
+        publicMedia.has(entry.source)
+          ? `${entry.source} appears in public media manifest`
+          : null,
+        fs.existsSync(publicPath)
+          ? `${entry.source} appears in public media output`
+          : null,
+        quarantineSource === entry.source
+          ? `${entry.source} does not map to quarantine path`
+          : null
+      ].filter(Boolean);
     });
 
-    expect([...approvedViolations, ...quarantineViolations]).toEqual([]);
+    expect([...approvedViolations, ...unapprovedViolations]).toEqual([]);
   });
 });

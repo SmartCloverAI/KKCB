@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Sora } from "next/font/google";
-import type { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 
 import "./globals.css";
 
@@ -29,13 +29,25 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children
 }: Readonly<{
   children: ReactNode;
 }>) {
   return (
-    <html className={`${sora.variable} ${newsreader.variable}`} lang="en">
+    <html
+      className={`${sora.variable} ${newsreader.variable}`}
+      lang="ro-RO"
+      suppressHydrationWarning
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.documentElement.lang=location.pathname.startsWith('/en')?'en':'ro-RO';"
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

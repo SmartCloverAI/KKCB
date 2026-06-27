@@ -1,9 +1,15 @@
 ---
 title: A European research roadmap for the Budo method
 excerpt: Why the Bucharest chapter needs pilot projects, academic partners, and grants that turn bedside practice into public evidence.
-publishedAt: 2026-04-17
+publishedAt: "2026-04-17"
 author: Kids Kicking Cancer with Budo Team
 coverId: team-with-student
+translationKey: eu-research-roadmap
+category: Research
+tags:
+  - research
+  - academic partnerships
+  - pilot projects
 ---
 
 If the method is going to develop responsibly in Romania, it is not enough to say that it has value. It needs projects that can be explained, evaluated, and discussed with clinical and academic partners.

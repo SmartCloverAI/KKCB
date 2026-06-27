@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { BankDetails } from "@/components/bank-details";
+import { DocumentCard } from "@/components/document-card";
 import { PageHero } from "@/components/site-ui";
 import { getDictionary } from "@/content/site";
 import { ensureLocale, withLocale } from "@/lib/site-utils";
@@ -28,12 +29,31 @@ export default async function GetInvolvedPage({
             </article>
           ))}
         </div>
+        <div className="section-intro">
+          <div className="section-intro__head">
+            <p className="eyebrow">Kids Kicking Cancer with Budo</p>
+            <h2>{page.documents.title}</h2>
+          </div>
+          <div className="section-intro__copy">
+            <p>{page.documents.intro}</p>
+            <p>{page.documents.warning}</p>
+          </div>
+        </div>
+        <div className="reference-grid">
+          {page.documents.items.map((document) => (
+            <DocumentCard document={document} key={document.href} />
+          ))}
+        </div>
         <article className="bank-card" aria-labelledby="bank-transfer-title">
           <div className="bank-card__intro">
             <p className="eyebrow" id="bank-transfer-title">
               {bank.title}
             </p>
             <p>{bank.intro}</p>
+            <p>
+              <strong>{bank.trustTitle}</strong>
+            </p>
+            <p>{bank.trustBody}</p>
           </div>
           <BankDetails bank={bank} />
         </article>

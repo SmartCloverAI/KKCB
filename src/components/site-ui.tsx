@@ -29,6 +29,10 @@ type SectionIntroProps = {
 type PageHeroProps = {
   title: string;
   lede: string;
+  eyebrow?: React.ReactNode;
+  action?: React.ReactNode;
+  media?: React.ReactNode;
+  variant?: "centered" | "split";
 };
 
 type InnerCtaProps = {
@@ -61,7 +65,6 @@ export function SiteFooter({ dictionary, versionLabel }: FooterProps) {
           alt={`${dictionary.brand.name} logo`}
           className="site-footer__logo"
           height={171}
-          loading="eager"
           src="/media/kids-kicking-cancer-with-budo-logo-v3.webp"
           width={429}
         />
@@ -108,15 +111,26 @@ export function SectionIntro({ eyebrow, title, intro }: SectionIntroProps) {
   );
 }
 
-export function PageHero({ title, lede }: PageHeroProps) {
+export function PageHero({
+  title,
+  lede,
+  eyebrow = "Kids Kicking Cancer with Budo",
+  action,
+  media,
+  variant
+}: PageHeroProps) {
+  const resolvedVariant = variant ?? (media ? "split" : "centered");
+
   return (
-    <section className="page-hero page-hero--centered">
-      <div className="page-hero__inner page-hero__inner--centered">
-        <p className="eyebrow">Kids Kicking Cancer with Budo</p>
+    <section className={`page-hero page-hero--${resolvedVariant}`}>
+      <div className={`page-hero__inner page-hero__inner--${resolvedVariant}`}>
+        {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <div className="page-hero__content">
           <h1>{title}</h1>
           <p>{lede}</p>
+          {action ? <div className="page-hero__action">{action}</div> : null}
         </div>
+        {media ? <div className="page-hero__media">{media}</div> : null}
       </div>
     </section>
   );
@@ -177,7 +191,6 @@ export function MediaCard({
         <Image
           alt={image.localizedAlt}
           fill
-          loading="eager"
           sizes="(max-width: 900px) 100vw, 50vw"
           src={image.src}
         />
@@ -197,7 +210,6 @@ export function BlogCard({ locale, post }: BlogCardProps) {
           <Image
             alt={cover.localizedAlt}
             fill
-            loading="eager"
             sizes="(max-width: 900px) 100vw, 33vw"
             src={cover.src}
           />

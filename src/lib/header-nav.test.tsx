@@ -12,9 +12,18 @@ import {
 } from "./header-nav";
 
 describe("header navigation helpers", () => {
-  it("returns the right button label for open and closed states", () => {
-    expect(getHeaderMenuButtonLabel(false)).toBe("Open navigation menu");
-    expect(getHeaderMenuButtonLabel(true)).toBe("Close navigation menu");
+  it("returns English button labels for open and closed states", () => {
+    expect(getHeaderMenuButtonLabel("en", false)).toBe("Open navigation menu");
+    expect(getHeaderMenuButtonLabel("en", true)).toBe("Close navigation menu");
+  });
+
+  it("returns Romanian button labels for open and closed states", () => {
+    expect(getHeaderMenuButtonLabel("ro", false)).toBe(
+      "Deschide meniul de navigare"
+    );
+    expect(getHeaderMenuButtonLabel("ro", true)).toBe(
+      "Închide meniul de navigare"
+    );
   });
 
   it("matches localized root and section routes without false positives", () => {
@@ -62,5 +71,25 @@ describe("header navigation helpers", () => {
     expect(html).toContain("site-header__desktop-nav");
     expect(html).toContain("site-mobile-nav");
     expect(html).toContain("site-nav__link--active");
+  });
+
+  it("marks the active navigation link as the current page", () => {
+    const html = renderToStaticMarkup(
+      <HeaderNavigationMenu
+        currentPathname="/en/about"
+        items={[
+          { href: "/about", label: "About" },
+          { href: "/method", label: "Method" }
+        ]}
+        locale="en"
+      />
+    );
+
+    expect(html).toMatch(
+      /<a(?=[^>]*href="\/en\/about")(?=[^>]*aria-current="page")[^>]*>/
+    );
+    expect(html).not.toMatch(
+      /<a(?=[^>]*href="\/en\/method")(?=[^>]*aria-current="page")[^>]*>/
+    );
   });
 });

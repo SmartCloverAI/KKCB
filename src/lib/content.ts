@@ -15,6 +15,9 @@ export type BlogPostSummary = {
   publishedAt: string;
   excerpt: string;
   coverId?: string;
+  translationKey?: string;
+  category?: string;
+  tags?: string[];
 };
 
 export type BlogPost = BlogPostSummary & {
@@ -29,9 +32,14 @@ type BlogPostFrontmatter = {
   publishedAt: string;
   author: string;
   coverId?: string;
+  translationKey?: string;
+  category?: string;
+  tags?: string[];
 };
 
 const blogRoot = path.join(process.cwd(), "content", "blog");
+const requiredStringFields = ["title", "excerpt", "publishedAt", "author"] as const;
+const rawHtmlPattern = /<!--[\s\S]*?-->|<\/?[A-Za-z][\w:-]*(?:\s[^<>]*)?>/;
 
 marked.setOptions({
   gfm: true,
@@ -42,8 +50,12 @@ function getLocaleDirectory(locale: Locale) {
   return path.join(blogRoot, locale);
 }
 
+function getMarkdownFilePath(locale: Locale, slug: string) {
+  return path.join(getLocaleDirectory(locale), `${slug}.md`);
+}
+
 function readMarkdownFile(locale: Locale, slug: string) {
-  return fs.readFileSync(path.join(getLocaleDirectory(locale), `${slug}.md`), "utf8");
+  return fs.readFileSync(getMarkdownFilePath(locale, slug), "utf8");
 }
 
 function readDirectory(locale: Locale) {
@@ -57,6 +69,98 @@ function readDirectory(locale: Locale) {
     .readdirSync(directory)
     .filter((file) => file.endsWith(".md"))
     .map((file) => file.replace(/\.md$/, ""));
+}
+
+function isFrontmatterRecord(data: unknown): data is Record<string, unknown> {
+  return typeof data === "object" && data !== null && !Array.isArray(data);
+}
+
+function frontmatterError(filePath: string, field: string, expectation: string) {
+  return new Error(
+    `Invalid blog frontmatter in ${filePath}: "${field}" ${expectation}.`
+  );
+}
+
+function requiredString(
+  data: Record<string, unknown>,
+  field: (typeof requiredStringFields)[number],
+  filePath: string
+) {
+  const value = data[field];
+
+  if (typeof value !== "string" || value.trim() === "") {
+    throw frontmatterError(filePath, field, "must be a non-empty string");
+  }
+
+  return value;
+}
+
+function optionalString(
+  data: Record<string, unknown>,
+  field: "category" | "coverId" | "translationKey",
+  filePath: string
+) {
+  const value = data[field];
+
+  if (value === undefined) {
+    return undefined;
+  }
+
+  if (typeof value !== "string" || value.trim() === "") {
+    throw frontmatterError(filePath, field, "must be a non-empty string when present");
+  }
+
+  return value;
+}
+
+function optionalStringArray(
+  data: Record<string, unknown>,
+  field: "tags",
+  filePath: string
+) {
+  const value = data[field];
+
+  if (value === undefined) {
+    return undefined;
+  }
+
+  if (
+    !Array.isArray(value) ||
+    value.some((item) => typeof item !== "string" || item.trim() === "")
+  ) {
+    throw frontmatterError(
+      filePath,
+      field,
+      "must be an array of non-empty strings when present"
+    );
+  }
+
+  return value;
+}
+
+function validateFrontmatter(data: unknown, filePath: string): BlogPostFrontmatter {
+  const frontmatter = isFrontmatterRecord(data) ? data : {};
+
+  return {
+    title: requiredString(frontmatter, "title", filePath),
+    excerpt: requiredString(frontmatter, "excerpt", filePath),
+    publishedAt: requiredString(frontmatter, "publishedAt", filePath),
+    author: requiredString(frontmatter, "author", filePath),
+    coverId: optionalString(frontmatter, "coverId", filePath),
+    translationKey: optionalString(frontmatter, "translationKey", filePath),
+    category: optionalString(frontmatter, "category", filePath),
+    tags: optionalStringArray(frontmatter, "tags", filePath)
+  };
+}
+
+function assertNoRawHtml(content: string, filePath: string) {
+  const match = content.match(rawHtmlPattern);
+
+  if (match) {
+    throw new Error(
+      `Invalid blog Markdown in ${filePath}: raw HTML is not allowed (${match[0]}).`
+    );
+  }
 }
 
 export function sortPostsByDate<T extends { publishedAt: string }>(posts: T[]): T[] {
@@ -80,9 +184,10 @@ export function getAllPostSummaries(locale: Locale): BlogPostSummary[] {
 
   return sortPostsByDate(
     slugs.map((slug) => {
+      const filePath = getMarkdownFilePath(locale, slug);
       const source = readMarkdownFile(locale, slug);
       const { data } = matter(source);
-      const frontmatter = data as BlogPostFrontmatter;
+      const frontmatter = validateFrontmatter(data, filePath);
 
       return {
         slug,
@@ -90,14 +195,17 @@ export function getAllPostSummaries(locale: Locale): BlogPostSummary[] {
         title: frontmatter.title,
         publishedAt: frontmatter.publishedAt,
         excerpt: frontmatter.excerpt,
-        coverId: frontmatter.coverId
+        coverId: frontmatter.coverId,
+        translationKey: frontmatter.translationKey,
+        category: frontmatter.category,
+        tags: frontmatter.tags
       };
     })
   );
 }
 
 export function getPostBySlug(locale: Locale, slug: string): BlogPost | null {
-  const filePath = path.join(getLocaleDirectory(locale), `${slug}.md`);
+  const filePath = getMarkdownFilePath(locale, slug);
 
   if (!fs.existsSync(filePath)) {
     return null;
@@ -105,7 +213,9 @@ export function getPostBySlug(locale: Locale, slug: string): BlogPost | null {
 
   const source = readMarkdownFile(locale, slug);
   const { data, content } = matter(source);
-  const frontmatter = data as BlogPostFrontmatter;
+  const frontmatter = validateFrontmatter(data, filePath);
+
+  assertNoRawHtml(content, filePath);
 
   return {
     slug,
@@ -115,6 +225,9 @@ export function getPostBySlug(locale: Locale, slug: string): BlogPost | null {
     excerpt: frontmatter.excerpt,
     author: frontmatter.author,
     coverId: frontmatter.coverId,
+    translationKey: frontmatter.translationKey,
+    category: frontmatter.category,
+    tags: frontmatter.tags,
     readingTime: readingTime(content).text,
     html: marked.parse(content) as string
   };

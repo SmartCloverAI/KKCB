@@ -1,9 +1,15 @@
 ---
 title: "Bedside volunteering: what meaningful presence really looks like"
 excerpt: What a Budo-based bedside intervention can look like in hospital and why continuity matters more than spectacle.
-publishedAt: 2026-04-21
+publishedAt: "2026-04-21"
 author: Kids Kicking Cancer with Budo Team
 coverId: thumbs-up-bedside
+translationKey: bedside-volunteering
+category: Volunteering
+tags:
+  - bedside care
+  - volunteers
+  - Budo
 ---
 
 At first glance, someone might assume the program is only an encouraging visit or a symbolic demonstration. In practice, an appropriate bedside intervention depends on **rhythm**, **discipline**, and **adaptation to medical reality**.
